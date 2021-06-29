@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
+import Header from '../components/header'
+import Team from '../components/team'
+import Roadmap from '../components/roadmap'
+import Partners from '../components/partners'
+import Bio from '../components/bio'
+import Contact from '../components/contact'
 
 export default function Home() {
   return (
@@ -9,23 +14,11 @@ export default function Home() {
         <title>Banach Group</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <a className={styles.title}>
-          BANACH GROUP
-        </a>
-
-        <div className={styles.grid}>
-          <p>Shape a new world around you.</p>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a>
-          All rights reserved{' '}
-          <img src="/logo.png" alt="Banach Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Header />
+      <Bio />
+      <Roadmap />
+      <Team />
+      <Contact />
     </div>
   )
 }
