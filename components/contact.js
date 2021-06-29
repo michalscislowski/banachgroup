@@ -77,7 +77,6 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
                                 InputLabelProps={{style: {fontWeight: '400', color: '#000', letterSpacing: '1.2px'}}}
                                 multiline
                                 rows={4}
-                                defaultValue="Default Value"
                                 variant="outlined"
                             />
                             <Button className={classes.button} variant="outlined"><b>WYŚLIJ</b></Button>
