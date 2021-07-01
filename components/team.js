@@ -79,6 +79,12 @@ const useStyles = makeStyles((theme) => ({
         a {
             cursor: pointer;
         }
+        @media only screen and (max-width: 900px) {
+        .team {
+            flex-direction: column;
+        }
+
+        }
         `}</style>
         </div>
   );

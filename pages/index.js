@@ -6,6 +6,7 @@ import Roadmap from '../components/roadmap'
 import Partners from '../components/partners'
 import Bio from '../components/bio'
 import Contact from '../components/contact'
+import Description from '../components/description'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Header />
       <Bio />
+      <Description />
       <Roadmap />
       <Team />
       <Contact />

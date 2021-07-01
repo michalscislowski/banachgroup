@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Socials from './socials';
 
 const useStyles = makeStyles((theme) => ({
     inputStyle: {
@@ -81,7 +82,7 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
                             />
                             <Button className={classes.button} variant="outlined"><b>WYŚLIJ</b></Button>
             </div>
-
+            <Socials />
             <style jsx>{`
                 .main {
                     color: #000;
@@ -98,6 +99,12 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
                 }
                 .title {
                     font-size: 50px;
+                }
+                @media only screen and (max-width: 415px) {
+                .title {
+                  font-size: 30px;
+                }
+
                 }
             `}</style>
         </div>

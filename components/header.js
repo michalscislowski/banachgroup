@@ -118,13 +118,24 @@ export default function Header(props) {
   .linkedin:hover {
     color: #0072b1;
   }
-  @media only screen and (max-width: 499px) {
+  @media only screen and (max-width: 800px) {
     .push, .logo {
       font-size: 22px;	
       margin auto;
     }
     a {
-      padding: 20px 0;
+      padding: 20px 10px;
+    }
+  }
+  @media only screen and (max-width: 499px) {
+    .push, .logo {
+      font-size: 18px;	
+    }
+    a {
+      padding: 20px 7px;
+    }
+    .socials {
+      display: none;
     }
   }
 
