@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       multilineColor:{
-        color: '#000',
+        color: '#0A100D',
         fontWeight: 600,
         borderWidth: "4px",
       },
@@ -60,7 +60,7 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
                                 }}
                                 label="podaj email" 
                                 className={classes.inputStyle} 
-                                InputLabelProps={{style: {fontWeight: '400', color: '#000', letterSpacing: '1.2px'}}}
+                                InputLabelProps={{style: {fontWeight: '400', color: '#0A100D', letterSpacing: '1.2px'}}}
                                 value={valuesEmail.name}
                                 onChange={handleChangeEmail("name")}
                                 helperText={emailError ? "niepoprawny adres email" : null}
@@ -75,7 +75,7 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
                                     }}
                                 label="tekst"
                                 className={classes.inputStyle} 
-                                InputLabelProps={{style: {fontWeight: '400', color: '#000', letterSpacing: '1.2px'}}}
+                                InputLabelProps={{style: {fontWeight: '400', color: '#0A100D', letterSpacing: '1.2px'}}}
                                 multiline
                                 rows={4}
                                 variant="outlined"
@@ -85,20 +85,21 @@ const emailError = isEmail(valuesEmail.name) !== true && valuesEmail.name.length
             <Socials />
             <style jsx>{`
                 .main {
-                    color: #000;
-                    padding-bottom: 3vh;
-                    padding-top: 3vh;
+                  height: 100vh;
                 }
                 .box {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    background-color: white;
-                    border-radius: 25px;
+                  color: #000;
+                  padding-bottom: 3vh;
+                  padding-top: 20vh;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: center;
+                  background-color: white;
+                  border-radius: 25px;
                 }
                 .title {
-                    font-size: 50px;
+                  font-size: 50px;
                 }
                 @media only screen and (max-width: 415px) {
                 .title {

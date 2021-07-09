@@ -29,7 +29,7 @@ export default function Socials() {
                         margin: 20px auto;
                         display: flex;
                         border-bottom: solid 2px white;
-                        color: white;
+                        color: #FFFFFC;
                         justify-content: space-between;
                         width: 200px;
                         padding-bottom: 5px;

@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
             <h1>Poznaj drużynę</h1>
             <div className="team">
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Michał Scisłowski" style={{ height: '300px', width: '300px' }} src="/image0.jpeg" />
+                    <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/image0.jpeg" />
                     <p>CEO</p>
                     <h3>Michał Scisłowski</h3>
                     <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/></a>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Artur Polarny" style={{ height: '300px', width: '300px', }} src="/aist.jpg"/>
+                    <Avatar alt="Artur Polarny" style={{ height: '250px', width: '250px', }} src="/aist.jpg"/>
                     <p>COO</p>
                     <h3>Artur Polarny</h3>
                     <div className="socials">
@@ -37,13 +37,13 @@ const useStyles = makeStyles((theme) => ({
                     
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Maciej Cieszyński" style={{ height: '300px', width: '300px', }} src="/cieszko.jpg"/>
+                    <Avatar alt="Maciej Cieszyński" style={{ height: '250px', width: '250px', }} src="/cieszko.jpg"/>
                     <p>CTO</p>
                     <h3>Maciej Cieszyński</h3>
                     <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/></a>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Łukasz Jęksa" style={{ height: '300px', width: '300px', }} src="/ljkwadrat.jpg"/>
+                    <Avatar alt="Łukasz Jęksa" style={{ height: '250px', width: '250px', }} src="/ljkwadrat.jpg"/>
                     <p>CIO</p>
                     <h3>Łukasz Jęksa</h3>
                     <div className="socials">
@@ -54,19 +54,25 @@ const useStyles = makeStyles((theme) => ({
             </div>
         <style jsx>{`
         .main {
+            background-color: #c1bfbf;
+            background-image: linear-gradient(315deg, #c1bfbf 0%, #af8231 74%);
             width: 100%;
-            height: auto;
+            height: 100vh;
             font-size: 30px;
-            color: white;
+            color: #0A100D;
             text-align: center;
         }
         .team {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            
             margin-left: 5vw;
             margin-right: 5vw;
-            color: white;
+            color: #FFFFFC;
+        }
+        h1 {
+            margin-top: 10vh;
         }
         p {
             font-size: 20px;
@@ -75,9 +81,11 @@ const useStyles = makeStyles((theme) => ({
         .socials {
             display: flex;
             flex-direction: row;
+            
         }
         a {
             cursor: pointer;
+            color: #0A100D;
         }
         @media only screen and (max-width: 900px) {
         .team {

@@ -18,7 +18,6 @@ export default function Home() {
       <Header />
       <Bio />
       <Description />
-      <Roadmap />
       <Team />
       <Contact />
     </div>

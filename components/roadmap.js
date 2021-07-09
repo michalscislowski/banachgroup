@@ -52,12 +52,12 @@ export default function Roadmap() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" style={{color: 'white'}}>
+          <Typography variant="body2" style={{color: '#FFFFFC'}}>
             KWIECIEŃ 2021
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot style={{color: 'black', backgroundColor: 'white'}}>
+          <TimelineDot style={{color: 'black', backgroundColor: '#FFFFFC'}}>
             <NextWeekIcon />
           </TimelineDot>
           <TimelineConnector />

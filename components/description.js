@@ -14,9 +14,15 @@ export default function Description() {
             </div>
 
             <style jsx>{`
+            .main {
+                height: 100vh;
+                background-color: #c1bfbf;
+                background-image: linear-gradient(225deg, #c1bfbf 0%, #af8231 74%);
+}
+            }
             .box {
-                padding: 7vh 20px 0 20px;
-                color: white;
+                margin: 10vh 20px 3vh 20px;
+                color: #0A100D;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -30,6 +36,7 @@ export default function Description() {
                 font-size: 120%;
                 text-align: justify;
                 margin-right: 2vw;
+                color: #0A100D;
             }
             @media only screen and (max-width: 800px) {
             .box {

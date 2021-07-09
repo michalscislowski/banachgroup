@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -13,20 +13,49 @@ const useStyles = makeStyles({
     fontWeight: '900',
     marginTop: 15,
     marginBottom: 10,
+    transition: '0.2s',
     ['@media (max-width:499px)']: {
       marginTop: 20,
     },
-    color: '#222',
+    color: '#0A100D',
     '&:hover' : {
-      color: '#fff',
-      background: '#222', 
+      color: '#F3B61F',
+      background: '#0A100D', 
     }
+  },
+  appBarTransparent: {
+    backgroundColor: 'rgba(255,255,255, 0.01)',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  appBarSolid: {
+    backgroundImage: 'linear-gradient(315deg, #c1bfbf 0%, #af8231 74%)',
+    display: 'flex',
+    alignItems: 'center',
   },
 });
 
 export default function Header(props) {
   const router = useRouter()
   const classes = useStyles();
+
+  const [navBackground, setNavBackground] = useState('appBarTransparent')
+    const navRef = React.useRef()
+    navRef.current = navBackground
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 120
+            if (show) {
+                setNavBackground('appBarSolid')
+            } else {
+                setNavBackground('appBarTransparent')
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
   const handleNas = (e) => {
     e.preventDefault()
@@ -35,7 +64,7 @@ export default function Header(props) {
 
   return (
     <div className="main">
-      <header className="header">
+      <header className={classes[navRef.current]} >
         <a id="top"></a>
         <a href="/"><a className="logo">BANACH</a></a>
         <div className="socials">
@@ -61,16 +90,15 @@ export default function Header(props) {
     left: 0;
     width: 100%;
     height: auto;
-    background-color: black;
     font-size: 25px;	
     font-weight: 300;	
     z-index: 2;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #F3B61F;
     scroll-behavior: smooth;
     opacity: ${props.opacityVal};
   }
   a {
-    color: white;
+    color: #0A100D;
     letter-spacing: 2px;
     text-decoration: none;
     padding: 20px 15px;
@@ -100,7 +128,7 @@ export default function Header(props) {
     transition: 0.3s;
   }
   a:hover {
-    
+    color: #F3B61F;
     transform: scale(1.15);
   }
   .facebook:hover {
