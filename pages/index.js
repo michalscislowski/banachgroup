@@ -10,16 +10,28 @@ import Description from '../components/description'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>Banach Group</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Bio />
-      <Description />
-      <Team />
-      <Contact />
+      <section><Bio /></section>
+      <section><Description /></section>
+      <section><Team/></section>
+      <section><Contact /></section>
+    <style jsx>{`
+      section {
+        border-bottom: 1px solid white;
+        height: 100vh;
+        scroll-snap-align: start;
+        text-align: center;
+        position: relative;
+      }
+      .container {
+        scrollbar-color: #606063 ##202324;
+      }
+    `}</style>
     </div>
   )
 }

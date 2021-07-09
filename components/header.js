@@ -17,45 +17,18 @@ const useStyles = makeStyles({
     ['@media (max-width:499px)']: {
       marginTop: 20,
     },
-    color: '#0A100D',
+    color: '#eee',
+    borderColor: '#999',
     '&:hover' : {
       color: '#F3B61F',
-      background: '#0A100D', 
+      background: '#39424c'
     }
-  },
-  appBarTransparent: {
-    backgroundColor: 'rgba(255,255,255, 0.01)',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  appBarSolid: {
-    backgroundImage: 'linear-gradient(315deg, #c1bfbf 0%, #af8231 74%)',
-    display: 'flex',
-    alignItems: 'center',
   },
 });
 
 export default function Header(props) {
   const router = useRouter()
   const classes = useStyles();
-
-  const [navBackground, setNavBackground] = useState('appBarTransparent')
-    const navRef = React.useRef()
-    navRef.current = navBackground
-    useEffect(() => {
-        const handleScroll = () => {
-            const show = window.scrollY > 120
-            if (show) {
-                setNavBackground('appBarSolid')
-            } else {
-                setNavBackground('appBarTransparent')
-            }
-        }
-        document.addEventListener('scroll', handleScroll)
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
 
   const handleNas = (e) => {
     e.preventDefault()
@@ -64,9 +37,9 @@ export default function Header(props) {
 
   return (
     <div className="main">
-      <header className={classes[navRef.current]} >
+      <header>
         <a id="top"></a>
-        <a href="/"><a className="logo">BANACH</a></a>
+        <a href="/" className="logo">BANACH</a>
         <div className="socials">
           <a className="facebook"><FacebookIcon aria-label="Facebook.com" onClick={() => window.open('https://www.facebook.com/BanachGroup')} /></a>
           <a className="instagram"><InstagramIcon aria-label="Instagram.com" onClick={() => window.open('https://www.instagram.com/BanachGroup/')}/></a>
@@ -75,10 +48,10 @@ export default function Header(props) {
           <a className="youtube"><YouTubeIcon aria-label="Youtube.com" onClick={() => window.open('https://www.youtube.com/channel/UCegE3WW7U2-Wb__mWK3oKJA')}/></a>
         </div>
         <div className="push" >
-          <a><Button className={classes.buttonStyle} onClick={handleNas} variant="contained">
+          <a><Button className={classes.buttonStyle} onClick={handleNas} variant="outlined">
             O NAS
           </Button></a>
-          <a><Button className={classes.buttonStyle} variant="contained">
+          <a><Button className={classes.buttonStyle} variant="outlined">
             BLOG
           </Button></a>
         </div>
@@ -93,19 +66,19 @@ export default function Header(props) {
     font-size: 25px;	
     font-weight: 300;	
     z-index: 2;
-    border-bottom: 1px solid #F3B61F;
     scroll-behavior: smooth;
     opacity: ${props.opacityVal};
   }
   a {
-    color: #0A100D;
+    color: #eee;
     letter-spacing: 2px;
     text-decoration: none;
     padding: 20px 15px;
   }
   .logo {
     font-weight: 700;
-    margin-left: 15px;
+    transition: 0.2s;
+    margin-bottom: 3px;
    }
    
   .push {
@@ -113,9 +86,10 @@ export default function Header(props) {
     cursor: pointer;
     margin-right: 20px;
   }
-  .header {
+  header {
     display: flex;
     align-items: center;
+    background: transparent;
   }
   .socials {
     display: flex;
@@ -125,11 +99,11 @@ export default function Header(props) {
   }
   .socials a {
     margin-left: 15px;
-    transition: 0.3s;
+    transition: 0.2s;
   }
-  a:hover {
+  .logo:hover {
     color: #F3B61F;
-    transform: scale(1.15);
+    transform: scale(1.05);
   }
   .facebook:hover {
     color: #3b5998;

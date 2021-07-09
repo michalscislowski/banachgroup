@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
     return (
         <div className="main">
-            <h1>Poznaj drużynę</h1>
+            <a className="team-header">Przyszli posiadacze jachtów</a>
             <div className="team">
                 <div className="box" className={classes.box}>
                     <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/image0.jpeg" />
@@ -54,42 +54,49 @@ const useStyles = makeStyles((theme) => ({
             </div>
         <style jsx>{`
         .main {
-            background-color: #c1bfbf;
-            background-image: linear-gradient(315deg, #c1bfbf 0%, #af8231 74%);
-            width: 100%;
+            background-color: #2C3E50;
             height: 100vh;
             font-size: 30px;
-            color: #0A100D;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
         }
         .team {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            
             margin-left: 5vw;
             margin-right: 5vw;
-            color: #FFFFFC;
+            color: #eee;
         }
-        h1 {
-            margin-top: 10vh;
+        .team-header {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: rgba(243, 182, 31, 1);
         }
         p {
             font-size: 20px;
-            font-weight: 300;
+            font-weight: 500;
         }
         .socials {
             display: flex;
             flex-direction: row;
-            
         }
         a {
             cursor: pointer;
-            color: #0A100D;
+            color: #eee;
+        }
+        a:first-child {
+            padding-right: 10px;
         }
         @media only screen and (max-width: 900px) {
         .team {
             flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         }
