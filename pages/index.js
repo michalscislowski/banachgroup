@@ -7,6 +7,7 @@ import Partners from '../components/partners'
 import Bio from '../components/bio'
 import Contact from '../components/contact'
 import Description from '../components/description'
+import TestContact from '../components/testcontact'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <section><Bio /></section>
       <section><Description /></section>
       <section><Team/></section>
-      <section><Contact /></section>
+      <section><TestContact /></section>
     <style jsx>{`
       section {
         border-bottom: 1px solid white;

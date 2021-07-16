@@ -10,7 +10,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   buttonStyle: {
+    fontFamily: 'consolas',
     fontWeight: '900',
+    fontSize: '1.25rem',
     marginTop: 15,
     marginBottom: 10,
     transition: '0.2s',
@@ -76,6 +78,7 @@ export default function Header(props) {
     padding: 20px 15px;
   }
   .logo {
+    font-size: 1.8rem;
     font-weight: 700;
     transition: 0.2s;
     margin-bottom: 3px;

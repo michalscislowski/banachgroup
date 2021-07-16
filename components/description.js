@@ -20,7 +20,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Typography style={{ fontFamily: 'consolas', fontSize: '1.4rem', fontWeight: '500' }}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -64,7 +64,7 @@ export default function Description() {
         <div className="main">
             <div className="box">
                 <a className="title">Co oferujemy</a>
-                <AppBar elevation={0} position="static" style={{  backgroundColor:'rgba(255, 255, 255, 0.001)'}} >
+                <AppBar elevation={0} position="static" style={{  backgroundColor:'rgba(255, 255, 255, 0.001)', }} >
                     <Tabs
                     value={value}
                     onChange={handleChange}
@@ -74,9 +74,9 @@ export default function Description() {
                     variant="fullWidth"
                     aria-label="full width tabs example"
                     >
-                    <Tab label="Rozwój technologii" {...a11yProps(0)} />
-                    <Tab label="Tworzenie serwisów" {...a11yProps(1)} />
-                    <Tab label="Blockchain konsulting" {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Rozwój technologii" {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Tworzenie serwisów" {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Blockchain konsulting" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction}>
@@ -97,7 +97,6 @@ export default function Description() {
                     In in lacus ligula. Morbi facilisis in dolor nec volutpat. 
                     Integer eleifend felis suscipit elit euismod eleifend eget eget purus. 
                     Phasellus sollicitudin rhoncus mauris in tincidunt. 
-                    Vivamus vitae scelerisque quam, in maximus mi. 
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -109,7 +108,6 @@ export default function Description() {
                     In in lacus ligula. Morbi facilisis in dolor nec volutpat. 
                     Integer eleifend felis suscipit elit euismod eleifend eget eget purus. 
                     Phasellus sollicitudin rhoncus mauris in tincidunt. 
-                    Vivamus vitae scelerisque quam, in maximus mi. 
                 </TabPanel>
             </div>
             <style jsx>{`
@@ -141,11 +139,7 @@ export default function Description() {
                 color: rgba(243, 182, 31, 1);
                 padding-bottom: 25px;
             }
-            .description {
-                font-size: 1.2rem;
-                text-align: justify;
-                color: #eee;
-            }
+
             @media only screen and (max-width: 499px) {
                 .main {
                     margin: auto;

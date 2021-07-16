@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
             color: #eee;
         }
         .team-header {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 700;
             margin-bottom: 50px;
             color: rgba(243, 182, 31, 1);
