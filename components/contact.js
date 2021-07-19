@@ -92,7 +92,7 @@ const emailError = isEmail(values.name) !== true && values.name.length !== 0;
     return (
         <div className="container">
             <Card elevation={7} className={classes.box}>
-              <a className="title">Skontaktuj się z nami</a>
+              
                 <TextField
                   InputProps={{
                     classes: {input: classes.multilineColor}
@@ -143,12 +143,7 @@ const emailError = isEmail(values.name) !== true && values.name.length !== 0;
                   justify-content: center;
                   align-items: center;
                 }
-                .title {
-                  padding-bottom: 20px;
-                  font-size: 3.2rem;
-                  font-weight: 600;
-                  color: rgba(243, 182, 31, 1);
-                }
+
                 @media only screen and (max-width: 415px) {
                 .title {
                   font-size: 30px;

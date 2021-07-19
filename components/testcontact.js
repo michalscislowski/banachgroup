@@ -15,25 +15,54 @@ export default function TestContact() {
 
   return (
     <div className="main">
+      <a className="title">Skontaktuj się z nami</a>
         <form className="contact" onSubmit={sendEmail}>
-            <label>Email</label>
-            <input type="email" name="user_name" id="user_name" />
-            <label>Wiadomość</label>
-            <textarea name="message" id="message"/>
-            <input type="submit" value="Send" />
+            <label className="email">Email</label>
+            <input className="emailvalue" type="email" name="user_name" id="user_name" />
+            <label className="text" >Wiadomość</label>
+            <textarea className="textvalue" name="message" id="message"/>
+            <input className="button" type="submit" value="WYŚLIJ" />
         </form>
         <style jsx>{`
                 .main {
                   height: 100vh;
                   padding-top: 20vh;
+                  
+                  background-color: #28313B;
+                }
+                .title {
+                  padding-bottom: 20px;
+                  font-size: 4.2rem;
+                  font-weight: 600;
+                  color: rgba(243, 182, 31, 1);
+                }
+                .contact {
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                  background-color: #28313B;
+                  color: white;
                 }
-                .contact {
-                    color: white;
+                .email {
+                  margin-top: 5vh;
+                  font-size: 3rem;
+                }
+                .emailvalue {
+                  width: 35vw;
+                  height: 30px;
+                }
+                .text {
+                  margin-top: 5vh;
+                  font-size: 3rem;
+                }
+                .textvalue {
+                  width: 35vw;
+                  min-height: 9.5vh;
+                }
+                .button {
+                  margin-top: 5vh;
+                  height: 4vh;
+                  width: 6vw;
                 }
             `}</style>
     </div>
