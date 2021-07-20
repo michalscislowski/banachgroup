@@ -134,7 +134,7 @@ export default function Description() {
                 font-weight: 200;
             }
             .title {
-                font-size: 2rem;
+                font-size: 2.8rem;
                 font-weight: 700;
                 color: rgba(243, 182, 31, 1);
                 padding-bottom: 25px;

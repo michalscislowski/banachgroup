@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
     return (
         <div className="main">
-            <a className="team-header">Przyszli posiadacze jachtów</a>
+            <a className="team-header">Zespół</a>
             <div className="team">
                 <div className="box" className={classes.box}>
                     <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/image0.jpeg" />

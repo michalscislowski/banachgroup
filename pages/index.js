@@ -5,7 +5,6 @@ import Team from '../components/team'
 import Roadmap from '../components/roadmap'
 import Partners from '../components/partners'
 import Bio from '../components/bio'
-import Contact from '../components/contact'
 import Description from '../components/description'
 import TestContact from '../components/testcontact'
 

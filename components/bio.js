@@ -5,7 +5,7 @@ export default function Bio() {
     return (
         <div className="main">
             <div className="box">
-                <a className="title">BANACH GROUP</a>
+                <a className="title">Banach Group</a>
                 <p className="description">Nadchodzą wielkie zmiany, a my chcemy być na ich przodzie.</p>
             </div>
 
@@ -29,7 +29,7 @@ export default function Bio() {
             .title {
                 font-size: 120px;
                 transition: 0.2s;
-                font-weight: 700;
+                font-weight: 500;
             }
             .box:hover {
                 color: rgba(243, 182, 31, 1);
@@ -62,7 +62,6 @@ export default function Bio() {
                 margin-top: -20px;
                 font-size: 15px;
             }
-
             }
             `}</style>
         </div>
