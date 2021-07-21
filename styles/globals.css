@@ -3,7 +3,7 @@ body {
   
   padding: 0;
   margin: 0;
-  font-family: "consolas",-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Titillium Web",-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -51,6 +51,13 @@ a {
 @font-face {
   font-family: "consolas";
   src: local("consolas"), url("/fonts/consolas-bold.ttf"), format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "franklin";
+  src: local("franklin"), url("/fonts/franklin-gothic-medium.ttf"), format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

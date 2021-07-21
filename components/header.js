@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   buttonStyle: {
-    fontFamily: 'consolas',
+    fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '1.25rem',
     marginTop: 15,
@@ -91,7 +91,7 @@ export default function Header(props) {
   }
   header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     background: transparent;
   }
   .socials {
@@ -133,8 +133,11 @@ export default function Header(props) {
     }
   }
   @media only screen and (max-width: 499px) {
+    .main {
+      width: 100vw;
+    }
     .push, .logo {
-      font-size: 18px;	
+      font-size: 1.5rem;	
     }
     a {
       padding: 20px 7px;

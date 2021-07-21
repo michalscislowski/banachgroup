@@ -17,13 +17,13 @@ export default function Home() {
       </Head>
       <Header />
       <section><Bio /></section>
-      <section><Description /></section>
+      <section><Description /></section> 
       <section><Team/></section>
       <section><TestContact /></section>
     <style jsx>{`
       section {
         border-bottom: 1px solid white;
-        height: 100vh;
+        height: 100%;
         scroll-snap-align: start;
         text-align: center;
         position: relative;
@@ -31,6 +31,10 @@ export default function Home() {
       .container {
         scrollbar-color: #606063 ##202324;
       }
+      @media only screen and (max-width: 499px) {
+        .container {
+          scroll-snap-type: y mandatory
+        }
     `}</style>
     </div>
   )

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import MobileSocials from './mobileSocials';
 import emailjs from 'emailjs-com';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -22,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
       borderColor: '#aa7c09',
+    },
+    '@media (max-width:499px)': {
+      width: '90vw',
     },
   },
   button: {
@@ -109,7 +113,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'consolas' }}}
+            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web' }}}
             key="podaj email"
             type="email"
             name="user_name"
@@ -126,7 +130,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'consolas'}}}
+            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web'}}}
             name="message"
             label="wiadomość" 
             id="message"
@@ -164,6 +168,7 @@ export default function TestContact() {
                 <a>884 108 114</a>
               </div>
             </div>
+            <div className="mobile"><MobileSocials /></div>
           </div>
         </form>
         <style jsx>{`
@@ -210,6 +215,24 @@ export default function TestContact() {
                 }
                 .right a {
                   font-size: 24px;
+                }
+                .mobile {
+                  display: none;
+                }
+                @media only screen and (max-width: 499px) {
+                  .main {
+                    padding-top: 10vh;
+                  }
+                  .title {
+                    font-size: 3rem; 
+                  }
+                  .data {
+                    padding-left: 0px; 
+                    padding-bottom: 10px;
+                  }
+                  .mobile {
+                    display: block;
+                  }
                 }
             `}</style>
     </div>

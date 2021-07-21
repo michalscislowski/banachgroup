@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
                     <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/image0.jpeg" />
                     <p>CEO</p>
                     <h3>Michał Scisłowski</h3>
-                    <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/></a>
+                    <div className="socials">
+                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/></a>
+                    </div>
                 </div>
                 <div className="box" className={classes.box}>
                     <Avatar alt="Artur Polarny" style={{ height: '250px', width: '250px', }} src="/aist.jpg"/>
@@ -40,7 +42,9 @@ const useStyles = makeStyles((theme) => ({
                     <Avatar alt="Maciej Cieszyński" style={{ height: '250px', width: '250px', }} src="/cieszko.jpg"/>
                     <p>CTO</p>
                     <h3>Maciej Cieszyński</h3>
-                    <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/></a>
+                    <div className="socials">
+                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/></a>
+                    </div>
                 </div>
                 <div className="box" className={classes.box}>
                     <Avatar alt="Łukasz Jęksa" style={{ height: '250px', width: '250px', }} src="/ljkwadrat.jpg"/>
@@ -98,7 +102,20 @@ const useStyles = makeStyles((theme) => ({
             margin-left: 0;
             margin-right: 0;
         }
-
+        }
+        @media only screen and (max-width: 900px) {
+            .main {
+                height: 100%;
+                padding-top: 10vh;
+                padding-bottom: 10vh;
+            }
+            h3 {
+                margin-top: -20px;
+            }
+            .socials {
+                margin-top: -30px;
+                padding-bottom: 8vh;
+            }
         }
         `}</style>
         </div>

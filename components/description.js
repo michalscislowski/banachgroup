@@ -20,7 +20,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography style={{ fontFamily: 'consolas', fontSize: '1.4rem', fontWeight: '500' }}>{children}</Typography>
+          <Typography style={{ fontFamily: 'Titillium Web', fontSize: '1.4rem', fontWeight: '500' }}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -64,7 +64,7 @@ export default function Description() {
         <div className="main">
             <div className="box">
                 <a className="title">Co oferujemy</a>
-                <AppBar elevation={0} position="static" style={{  backgroundColor:'rgba(255, 255, 255, 0.001)', }} >
+                <AppBar elevation={0} position="static" style={{  backgroundColor:'rgba(255, 255, 255, 0.001)', width: '100%'}} >
                     <Tabs
                     value={value}
                     onChange={handleChange}
@@ -73,13 +73,14 @@ export default function Description() {
                     }}
                     variant="fullWidth"
                     aria-label="full width tabs example"
+                    centered
                     >
-                    <Tab style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Rozwój technologii" {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Tworzenie serwisów" {...a11yProps(1)} />
-                    <Tab  style={{ fontFamily: 'consolas', fontSize: '1.1rem'}} label="Blockchain konsulting" {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Rozwój technologii" {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Tworzenie serwisów" {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Blockchain konsulting" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0} dir={theme.direction}>
+                <TabPanel value={value} index={0} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
                     Banach Group będzie pierwszą firmą w Polsce, 
                     która zapewni klientom detalicznym i biznesowym bezpieczny dostęp do technologii <b>BLOCKCHAIN</b>.
                     Firma chce być w centrum sieci <b>BITCOIN</b> w kraju, oferując usługi informatyczne,
@@ -87,7 +88,7 @@ export default function Description() {
                     Dzięki doświadczeniu, które wykracza poza branżę telekomunikacyjną i IT, 
                     nasza grupa koncentruje się na wprowadzaniu na rynek nowych modeli biznesowych opartych o mikro i nano transakcje.
                 </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
+                <TabPanel value={value} index={1} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Duis ullamcorper ex non dui sodales posuere. 
                     Nulla id nunc sed nisl vehicula lobortis. 
@@ -98,7 +99,7 @@ export default function Description() {
                     Integer eleifend felis suscipit elit euismod eleifend eget eget purus. 
                     Phasellus sollicitudin rhoncus mauris in tincidunt. 
                 </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
+                <TabPanel value={value} index={2} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Duis ullamcorper ex non dui sodales posuere. 
                     Nulla id nunc sed nisl vehicula lobortis. 
@@ -112,26 +113,19 @@ export default function Description() {
             </div>
             <style jsx>{`
             .main {
-                height: 100vh;
-                background-color: #28313B;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                color: white;
+              height: 100vh;
+              background-color: #28313B;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: white;
             }
             .box {
-                margin: auto;
-                width: 60%;
-                max-width: 750px;
-                min-width: 400px;
-                font-size: 16px;
-                text-align: justify;
-                letter-spacing: 0.5px;
-                line-height: 1.625;
-            }
-            .uptitle {
-                font-size: 1.6rem;
-                font-weight: 200;
+              width: 60%;
+              font-size: 16px;
+              letter-spacing: 0.5px;
+              line-height: 1.625;
             }
             .title {
                 font-size: 2.8rem;
@@ -141,11 +135,19 @@ export default function Description() {
             }
 
             @media only screen and (max-width: 499px) {
-                .main {
-                    margin: auto;
-                    min-width: 300px;
-                    width: 90%;
-            }
+              .main {
+                height: 100%;
+                padding-top: 10vh;
+                margin: auto;
+                padding-bottom: 10vh;
+              }
+              .box {
+                width: 100%;
+              }
+              .title {
+                width: 100vw;
+                text-align: center;
+              }
             `}</style>
     </div>
   );
