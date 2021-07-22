@@ -29,9 +29,11 @@ export default function Home() {
         scroll-snap-align: start;
         text-align: center;
         position: relative;
+        overflow:visible;
       }
       .container {
         scrollbar-color: #606063 ##202324;
+        -webkit-overflow-scrolling: touch;
       }
       @media only screen and (max-width: 499px) {
         .container {
