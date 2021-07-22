@@ -10,7 +10,8 @@ export default function Bio() {
             <style jsx>{`
                 .main {
                     width: 100%;
-                    height: 100vh;
+                    min-height: 100vh;
+                    height: 100%;
                     color: rgba(243, 182, 31, 1);
                     background-color: #2C3E50;
                     display: flex;
@@ -20,16 +21,17 @@ export default function Bio() {
                 } 
                 .title {
                     font-size: 9rem;
-                    transition: 0.2s;
                     font-weight: 500;
+                    margin: 0;
                 }
                 .description {
+                    margin: 0;
                     font-size: 2.2rem;
-                    text-align: justify;
                     color: #eee;
                 }
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 812px) {
                 .title {
+                    padding-top: 10vh;
                     font-size: 7rem;
                 }
                 .box {
@@ -52,6 +54,11 @@ export default function Bio() {
                     margin-right: 0;
                     margin-top: -20px;
                     font-size: 1.5rem;
+                }
+            }
+            @media only screen and (max-height: 399px) {
+                .main {
+                    padding-bottom: 40vh;
                 }
             }
             `}</style>

@@ -173,7 +173,8 @@ export default function TestContact() {
         </form>
         <style jsx>{`
                 .main {
-                  height: 100vh;
+                  min-height: 100vh;
+                  height: 100%;
                   padding-top: 20vh;
                   background-color: #28313B;
                 }
@@ -232,6 +233,11 @@ export default function TestContact() {
                   }
                   .mobile {
                     display: block;
+                  }
+                }
+                @media only screen and (max-height: 620px) {
+                  .main {
+                      padding-bottom: 30vh;
                   }
                 }
             `}</style>

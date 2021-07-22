@@ -59,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
         <style jsx>{`
         .main {
             background-color: #2C3E50;
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
             font-size: 30px;
             text-align: center;
             display: flex;
@@ -99,13 +100,13 @@ const useStyles = makeStyles((theme) => ({
         @media only screen and (max-width: 1230px) {
             .main {
                 height: 100%;
-                padding-top: 10vh;
+                padding-top: 20vh;
                 padding-bottom: 10vh;
             }
             .team {
-            flex-direction: column;
-            margin-left: 0;
-            margin-right: 0;
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
             }
             h3 {
                 margin-top: -20px;
@@ -113,6 +114,11 @@ const useStyles = makeStyles((theme) => ({
             .socials {
                 margin-top: -30px;
                 padding-bottom: 8vh;
+            }
+        }
+        @media only screen and (max-height: 620px) {
+            .main {
+                padding-bottom: 30vh;
             }
         }
         `}</style>

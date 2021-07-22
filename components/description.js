@@ -113,7 +113,8 @@ export default function Description() {
             </div>
             <style jsx>{`
             .main {
-              height: 100vh;
+              min-height: 100vh;
+              height: 100%;
               background-color: #28313B;
               display: flex;
               flex-direction: column;
@@ -126,6 +127,7 @@ export default function Description() {
               font-size: 16px;
               letter-spacing: 0.5px;
               line-height: 1.625;
+              padding-bottom: 20vh;
             }
             .title {
                 font-size: 2.8rem;
@@ -134,12 +136,11 @@ export default function Description() {
                 padding-bottom: 25px;
             }
 
-            @media only screen and (max-width: 720px) {
+            @media only screen and (max-width: 812px) {
               .main {
                 height: 100%;
-                padding-top: 10vh;
+                padding-top: 20vh;
                 margin: auto;
-                padding-bottom: 10vh;
               }
               .box {
                 width: 100%;
@@ -148,6 +149,11 @@ export default function Description() {
                 width: 100vw;
                 text-align: center;
               }
+              @media only screen and (max-height: 270px) {
+                .main {
+                    padding-bottom: 40vh;
+                }
+            }
             `}</style>
     </div>
   );
