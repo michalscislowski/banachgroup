@@ -4,8 +4,9 @@ export default function Bio() {
 
     return (
         <div className="main">
-                <p className="title">BANACH GROUP</p>
-                <p className="description">O block przed wszystkimi</p>
+            <a id="back-to-top-anchor" ></a>
+            <p className="title">BANACH GROUP</p>
+            <p className="description">O block przed wszystkimi</p>
             <style jsx>{`
                 .main {
                     width: 100%;

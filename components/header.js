@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import AppBar from '@material-ui/core/AppBar';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -9,6 +10,32 @@ import { useRouter } from 'next/router'
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
+  root: {
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    width: '100%',
+    height: 'auto',
+    fontSize: '25px',	
+    fontWeight: '300',	
+    zIndex: '2',
+    scrollBehavior: 'smooth',
+    opacity: '${props.opacityVal}',
+  },
+  appBarTransparent: {
+    background: 'transparent',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    transition: '0.1s',
+  },
+  appBarSolid: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    backgroundColor: '#2C3E50',
+    transition: '0.5s',
+  },
   buttonStyle: {
     fontFamily: 'Titillium Web',
     fontWeight: '900',
@@ -31,6 +58,25 @@ const useStyles = makeStyles({
 export default function Header(props) {
   const router = useRouter()
   const classes = useStyles();
+  const [navBackground, setNavBackground] = useState('appBarTransparent')
+  const navRef = React.useRef()
+  navRef.current = navBackground
+
+  useEffect(() => {
+    const handleScroll = () => {
+        const show = window.scrollY > 100
+        let windowSize = window.innerWidth;
+        if (show & windowSize <= 899) {
+            setNavBackground('appBarSolid')
+        } else {
+            setNavBackground('appBarTransparent')
+        }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+        document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const handleNas = (e) => {
     e.preventDefault()
@@ -38,9 +84,8 @@ export default function Header(props) {
   }
 
   return (
-    <div className="main">
-      <header>
-        <a id="top"></a>
+    <div className={classes.root}>
+      <AppBar elevation={0} className={classes[navRef.current]}>
         <a href="/" className="logo">BANACH</a>
         <div className="socials">
           <a className="facebook"><FacebookIcon aria-label="Facebook.com" onClick={() => window.open('https://www.facebook.com/BanachGroup')} /></a>
@@ -57,20 +102,8 @@ export default function Header(props) {
             BLOG
           </Button></a>
         </div>
-      </header>
+      </AppBar>
       <style jsx>{`
-  .main {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: auto;
-    font-size: 25px;	
-    font-weight: 300;	
-    z-index: 2;
-    scroll-behavior: smooth;
-    opacity: ${props.opacityVal};
-  }
   a {
     color: #eee;
     letter-spacing: 2px;

@@ -7,6 +7,7 @@ import Partners from '../components/partners'
 import Bio from '../components/bio'
 import Description from '../components/description'
 import TestContact from '../components/testcontact'
+import ButtonTop from '../components/buttontop'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <section><Description /></section> 
       <section><Team/></section>
       <section><TestContact /></section>
+      <ButtonTop />
     <style jsx>{`
       section {
         border-bottom: 1px solid white;
