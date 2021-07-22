@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
       borderColor: '#aa7c09',
     },
-    '@media (max-width:499px)': {
+    '@media (max-width:640px)': {
       width: '90vw',
     },
   },
@@ -219,7 +219,7 @@ export default function TestContact() {
                 .mobile {
                   display: none;
                 }
-                @media only screen and (max-width: 499px) {
+                @media only screen and (max-width: 640px) {
                   .main {
                     padding-top: 10vh;
                   }

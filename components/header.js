@@ -165,7 +165,7 @@ export default function Header(props) {
       padding: 20px 10px;
     }
   }
-  @media only screen and (max-width: 499px) {
+  @media only screen and (max-width: 640px) {
     .main {
       width: 100vw;
     }

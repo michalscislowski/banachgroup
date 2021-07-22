@@ -96,18 +96,16 @@ const useStyles = makeStyles((theme) => ({
         a:first-child {
             padding-right: 10px;
         }
-        @media only screen and (max-width: 900px) {
-        .team {
-            flex-direction: column;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        }
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 1230px) {
             .main {
                 height: 100%;
                 padding-top: 10vh;
                 padding-bottom: 10vh;
+            }
+            .team {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
             }
             h3 {
                 margin-top: -20px;

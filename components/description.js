@@ -134,7 +134,7 @@ export default function Description() {
                 padding-bottom: 25px;
             }
 
-            @media only screen and (max-width: 499px) {
+            @media only screen and (max-width: 720px) {
               .main {
                 height: 100%;
                 padding-top: 10vh;
