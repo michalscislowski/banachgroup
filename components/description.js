@@ -75,40 +75,29 @@ export default function Description() {
                     aria-label="full width tabs example"
                     centered
                     >
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Rozwój technologii" {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Tworzenie serwisów" {...a11yProps(1)} />
-                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1.1rem'}} label="Blockchain konsulting" {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Doradztwo biznesowe" {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Wdrożanie technologii" {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Rozwój aplikacji" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
-                    Banach Group będzie pierwszą firmą w Polsce, 
-                    która zapewni klientom detalicznym i biznesowym bezpieczny dostęp do technologii <b>BLOCKCHAIN</b>.
-                    Firma chce być w centrum sieci <b>BITCOIN</b> w kraju, oferując usługi informatyczne,
-                    a także doradztwo biznesowe w zakresie komercjalizacji i wdrażania technologii <b>BLOCKCHAIN</b>.
-                    Dzięki doświadczeniu, które wykracza poza branżę telekomunikacyjną i IT, 
-                    nasza grupa koncentruje się na wprowadzaniu na rynek nowych modeli biznesowych opartych o mikro i nano transakcje.
+                <TabPanel value={value} index={0} dir={theme.direction} style={{ minHeight: '250px',  width: '100%', textAlign: 'justify'}}>
+                  Banach Group będzie pierwszą firmą w Polsce, 
+                  która zapewni klientom detalicznym i biznesowym bezpieczny dostęp do technologii <b>BLOCKCHAIN</b>.
+                  Firma chce być w centrum sieci <b>BITCOIN</b> w kraju, oferując usługi informatyczne,
+                  a także doradztwo biznesowe w zakresie komercjalizacji technologii <b>BLOCKCHAIN</b>.
                 </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Duis ullamcorper ex non dui sodales posuere. 
-                    Nulla id nunc sed nisl vehicula lobortis. 
-                    Aenean suscipit nisl vitae erat rutrum, a feugiat nulla maximus. 
-                    Fusce maximus tellus ac augue malesuada maximus. 
-                    Suspendisse et felis pellentesque, placerat lacus nec, posuere enim. 
-                    In in lacus ligula. Morbi facilisis in dolor nec volutpat. 
-                    Integer eleifend felis suscipit elit euismod eleifend eget eget purus. 
-                    Phasellus sollicitudin rhoncus mauris in tincidunt. 
+                <TabPanel value={value} index={1} dir={theme.direction} style={{ minHeight: '250px', width: '100%', textAlign: 'justify'}}>
+                  Dzięki doświadczeniu, które wykracza poza branżę telekomunikacyjną i IT, 
+                  nasza grupa koncentruje się na wprowadzaniu na rynek nowych modeli biznesowych opartych o mikro i nano transakcje.
+                  Staramy się znaleźć jak najwięcej zastosowań, 
+                  w których technologia <b>BLOCKCHAIN</b> byłaby w stanie podnieść szybkość dostarczania produktu,
+                  jego bezpieczeństwo oraz możliwości, powoli starzejących się usług uchodzących za standard.
                 </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction} style={{  width: '100%', textAlign: 'justify'}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Duis ullamcorper ex non dui sodales posuere. 
-                    Nulla id nunc sed nisl vehicula lobortis. 
-                    Aenean suscipit nisl vitae erat rutrum, a feugiat nulla maximus. 
-                    Fusce maximus tellus ac augue malesuada maximus. 
-                    Suspendisse et felis pellentesque, placerat lacus nec, posuere enim. 
-                    In in lacus ligula. Morbi facilisis in dolor nec volutpat. 
-                    Integer eleifend felis suscipit elit euismod eleifend eget eget purus. 
-                    Phasellus sollicitudin rhoncus mauris in tincidunt. 
+                <TabPanel value={value} index={2} dir={theme.direction} style={{ minHeight: '250px', width: '100%', textAlign: 'justify'}}>
+                  <b>BLOCKCHAIN</b> jako narzędzie jest stale rozwijającą się technologią,
+                  do której co chwila są tworzone nowe usługi, czy produkty.
+                  Dzięki łącznej wiedzy uzyskanej na przestrzeni lat, 
+                  mamy możliwości być na przodzie wyścigu o klienta i technologię.
                 </TabPanel>
             </div>
             <style jsx>{`
@@ -127,7 +116,7 @@ export default function Description() {
               font-size: 16px;
               letter-spacing: 0.5px;
               line-height: 1.625;
-              padding-bottom: 20vh;
+              padding-top: 10vh;
             }
             .title {
                 font-size: 2.8rem;
@@ -139,7 +128,7 @@ export default function Description() {
             @media only screen and (max-width: 812px) {
               .main {
                 height: 100%;
-                padding-top: 20vh;
+                padding-top: 10vh;
                 margin: auto;
               }
               .box {

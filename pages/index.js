@@ -27,6 +27,7 @@ export default function Home() {
         border-bottom: 1px solid white;
         height: 100%;
         scroll-snap-align: start;
+        scroll-snap-type: y proximity;
         text-align: center;
         position: relative;
         overflow:visible;
@@ -35,10 +36,6 @@ export default function Home() {
         scrollbar-color: #606063 ##202324;
         -webkit-overflow-scrolling: touch;
       }
-      @media only screen and (max-width: 1399px) {
-        .container {
-          scroll-snap-type: y proximity
-        }
     `}</style>
     </div>
   )

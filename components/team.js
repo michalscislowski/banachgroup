@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
             <a className="team-header">Zespół</a>
             <div className="team">
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/image0.jpeg" />
+                    <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/prezes_kwadrat.png" />
                     <p>CEO</p>
                     <h3>Michał Scisłowski</h3>
                     <div className="socials">
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
                     
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Maciej Cieszyński" style={{ height: '250px', width: '250px', }} src="/cieszko.jpg"/>
+                    <Avatar alt="Maciej Cieszyński" style={{ height: '250px', width: '250px', }} src="/czad_kwadrat.png"/>
                     <p>CTO</p>
                     <h3>Maciej Cieszyński</h3>
                     <div className="socials">

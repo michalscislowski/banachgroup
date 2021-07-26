@@ -61,17 +61,19 @@ export default function TestContact() {
   const classes = useStyles();
   const [email, setEmail] = useState(emptyEmail);
   const [open, setOpen] = useState(false);
+  const [openSucces, setOpenSucces] = useState(false);
 
 
-  const handleBoth = () => {
+  const handleWarning = () => {
     setOpen(true);
   };
 
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+  const handleSucces = () => {
+    setOpenSucces(true);
+  };
 
+  const handleClose = () => {
+    setOpenSucces(false);
     setOpen(false);
   };
 
@@ -83,7 +85,7 @@ export default function TestContact() {
 
   function sendEmail(e) {
     e.preventDefault();
-    if (email.user_name & email.message !== null){
+    if (email.user_name !== null && email.message !== null){
       emailjs.sendForm('banach_contact', 'template_korn0vo', e.target, 'user_5KT4anh7XaqgEHyrhQh4Z')
       .then((result) => {
           console.log(result.text);
@@ -91,9 +93,11 @@ export default function TestContact() {
           console.log(error.text);
       });
 
-    setEmail(emptyEmail);
+      setEmail(emptyEmail);
+      handleSucces();
+
     } else {
-      handleBoth()
+      handleWarning();
     }
   }
 
@@ -149,6 +153,11 @@ export default function TestContact() {
           <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="warning">
               Proszę uzupełnić dane
+            </Alert>
+          </Snackbar>
+          <Snackbar open={openSucces} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="success">
+              Wiadomość wysłana!
             </Alert>
           </Snackbar>
           <div className="box">
