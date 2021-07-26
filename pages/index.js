@@ -35,9 +35,9 @@ export default function Home() {
         scrollbar-color: #606063 ##202324;
         -webkit-overflow-scrolling: touch;
       }
-      @media only screen and (max-width: 499px) {
+      @media only screen and (max-width: 1399px) {
         .container {
-          scroll-snap-type: y mandatory
+          scroll-snap-type: y proximity
         }
     `}</style>
     </div>
