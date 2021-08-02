@@ -106,9 +106,6 @@ const useStyles = makeStyles((theme) => ({
             cursor: pointer;
             color: #eee;
         }
-        a:first-child {
-            padding-right: 10px;
-        }
         @media only screen and (max-width: 1300px) {
             .team-header {
                 font-size: 2.5rem;
@@ -126,7 +123,22 @@ const useStyles = makeStyles((theme) => ({
         }
         @media only screen and (max-width: 499px) {
             .main {
-                padding-bottom: 30vh;
+                padding-bottom: 20vh;
+                padding-top: 100px;
+                margin: 0;
+            }
+            .socials {
+                padding-bottom: 20px;
+            }
+            h3 {
+                margin-top: -30px;
+                padding-bottom: 0;
+            }
+            p {
+                margin-top: 2px;
+            }
+            .team-header {
+                margin-bottom: 20px;
             }
         }
         `}</style>

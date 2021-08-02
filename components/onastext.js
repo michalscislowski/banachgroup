@@ -28,7 +28,7 @@ export default function ONasText() {
             </ul>
 
             <h3>Kontakt</h3>
-            <ul>
+            <ul className="kontakt">
                 <li>Adres siedziby: Wilczak 12F/48</li>
                 <li>Adres email: office@8anach.com</li>
             </ul>
@@ -60,11 +60,17 @@ export default function ONasText() {
                 line-height: 1.625;
                 background-color: #2C3E50;
             }
+            .kontakt {
+                padding-bottom: 50px;
+            }
             @media only screen and (max-width: 499px) {
                 .main {
                     margin: auto;
                     min-width: 300px;
                     width: 90%;
+                }
+                p, ul {
+                    padding-bottom: 0;
                 }
             }
             `}</style>

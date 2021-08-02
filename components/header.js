@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     background: 'transparent',
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'baseline',
+    alignItems: 'center',
     transition: '0.1s',
   },
   appBarSolid: {
@@ -40,8 +40,8 @@ const useStyles = makeStyles({
     fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '1.25rem',
-    marginTop: 15,
-    marginBottom: 10,
+    marginTop: 10,
+    marginBottom: 20,
     transition: '0.2s',
     ['@media (max-width:499px)']: {
       marginTop: 20,
@@ -86,7 +86,7 @@ export default function Header(props) {
   return (
     <div className={classes.root}>
       <AppBar elevation={0} className={classes[navRef.current]}>
-        <a href="/" className="logo">BANACH</a>
+        <a href="/" className="logo"> <img src="2.png" width="130" height="73"/> </a>
         <div className="socials">
           <a className="facebook"><FacebookIcon aria-label="Facebook.com" onClick={() => window.open('https://www.facebook.com/BanachGroup')} /></a>
           <a className="instagram"><InstagramIcon aria-label="Instagram.com" onClick={() => window.open('https://www.instagram.com/BanachGroup/')}/></a>
@@ -95,10 +95,10 @@ export default function Header(props) {
           <a className="youtube"><YouTubeIcon aria-label="Youtube.com" onClick={() => window.open('https://www.youtube.com/channel/UCegE3WW7U2-Wb__mWK3oKJA')}/></a>
         </div>
         <div className="push" >
-          <a><Button className={classes.buttonStyle} onClick={handleNas} variant="outlined">
+          <a><Button className={classes.buttonStyle} onClick={handleNas} >
             O NAS
           </Button></a>
-          <a><Button className={classes.buttonStyle} variant="outlined">
+          <a><Button className={classes.buttonStyle} >
             BLOG
           </Button></a>
         </div>
@@ -111,11 +111,8 @@ export default function Header(props) {
     padding: 20px 15px;
   }
   .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    transition: 0.2s;
-    position: relative;
-    bottom: 2px;
+    margin: 0;
+    padding: 0;
    }
    
   .push {
@@ -140,7 +137,7 @@ export default function Header(props) {
   }
   .logo:hover {
     color: #F3B61F;
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
   .facebook:hover {
     color: #3b5998;
@@ -158,11 +155,11 @@ export default function Header(props) {
     color: #0072b1;
   }
   @media only screen and (max-width: 800px) {
-    .push, .logo {
+    .push {
       font-size: 22px;	
       margin auto;
     }
-    a {
+    .socials a {
       padding: 20px 10px;
     }
   }
@@ -170,11 +167,11 @@ export default function Header(props) {
     .main {
       width: 100vw;
     }
-    .push, .logo {
+    .push {
       font-size: 1.5rem;	
     }
-    a {
-      padding: 20px 7px;
+    .logo {
+      margin-top: 10px;
     }
     .socials {
       display: none;

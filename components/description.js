@@ -88,7 +88,7 @@ export default function Description() {
                     centered
                     >
                     <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Doradztwo biznesowe" {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Wdrożanie technologii" {...a11yProps(1)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Wdrażanie technologii" {...a11yProps(1)} />
                     <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Rozwój aplikacji" {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
@@ -138,6 +138,7 @@ export default function Description() {
             @media only screen and (max-width: 499px) {
               .box {
                 width: 95%;
+                padding-top: 100px;
               }
             }
             `}</style>
