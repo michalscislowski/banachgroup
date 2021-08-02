@@ -114,7 +114,8 @@ export default function Header(props) {
     font-size: 1.8rem;
     font-weight: 700;
     transition: 0.2s;
-    margin-bottom: 3px;
+    position: relative;
+    bottom: 2px;
    }
    
   .push {

@@ -15,7 +15,10 @@ export default function Onas() {
         <Header />
         <ONasText />
         <style jsx> {`
-
+        .container {
+          background-color: #2C3E50;
+          color: white;
+        }
         `} </style>
       </div>
     )

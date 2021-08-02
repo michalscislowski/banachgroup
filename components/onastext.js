@@ -42,9 +42,12 @@ export default function ONasText() {
             p, ul {
                 padding-bottom: 24px;
             }
+            ul:last-child {
+                margin-bottom: 0;
+            }
             .main {
                 margin: auto;
-                margin-top: 140px;
+                padding-top: 90px;
                 width: 60%;
                 max-width: 750px;
                 min-width: 400px;
@@ -53,10 +56,7 @@ export default function ONasText() {
                 text-align: justify;
                 letter-spacing: 0.5px;
                 line-height: 1.625;
-            }
-            .main-dark {
-                background-color: #0a0e12;
-                color: #9d9487;
+                background-color: #2C3E50;
             }
             @media only screen and (max-width: 499px) {
                 .main {

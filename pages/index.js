@@ -35,7 +35,7 @@ export default function Home() {
         border: none;
       }
       .container {
-        scrollbar-color: #606063 ##202324;
+        scrollbar-color: #606063 #202324;
         -webkit-overflow-scrolling: touch;
       }
     `}</style>
