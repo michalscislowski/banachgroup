@@ -6,10 +6,10 @@ export default function ONasText() {
             <h1>O nas</h1>
    
             <h3>Czym jest Banach Group?</h3>
-            <p>Banach Group będzie pierwszą instytucją w Polsce, która zapewni klientom detalicznym i biznesowym bezpieczny dostęp do rynku Bitcoin SV. Banach Group chce być w centrum sieci Bitcoin SV w kraju, oferując usługi finansowe i technologiczne, a także doradztwo biznesowe w zakresie komercjalizacji i wdrażania technologii. W całej naszej organizacji zawsze staramy się łączyć odpowiednie umiejętności i wiedzę, aby wspierać rozwój technologii, rozwój sieci i obsługę klienta. Dzięki doświadczeniu, które wykracza poza branżę telekomunikacyjną i IT, nasza grupa koncentruje się na wprowadzaniu na rynek najnowocześniejszych rozwiązań. </p>
+            <p>Jesteśmy startup'em, nastawionym na uczestniczeniu w procesie: rozwijania technologii blockchain, wprowadzania nowych rozwiązań i pomocy doradzczej z tym związanej. </p>
         
             <h3>Nasza misja</h3>
-            <p>Misją Banach Group jest rozwijanie ekosystemu Bitcoin SV w Polsce i budowa biznesu w oparciu o jeden stabilny, globalny łańcuch.</p>
+            <p>Misją Banach Group jest rozwijanie ekosystemu blockchain w Polsce i budowa biznesu w oparciu o jeden stabilny, globalny łańcuch.</p>
         
             <h3>Cele na pierwszy 12 miesięcy:</h3>
             <ul>
@@ -21,10 +21,10 @@ export default function ONasText() {
             <h3>Nasze plany na przyszłość</h3>
             <ul>
                 <li>Wdrażanie nowoczesnych technologii w oparciu o technologię blockchain</li>
-                <li>Pokazanie użytkownikowi pozytywnych aspektów wykorzystania bitcoina SV w świecie finansów przyszłości</li>
+                <li>Pokazanie użytkownikowi pozytywnych aspektów wykorzystania kryptowalut w świecie finansów przyszłości</li>
                 <li>Dostarczenie użytkownikom kompleksowych narzędzi oraz programów finansowych</li>
-                <li>Rozwój fundacji Bitcoin SV w Polsce i promocja równego dostępu do technologii</li>
-                <li>Wprowadzenie serii usług opartych o walutę bitcoina SV</li>
+                <li>Promocja równego dostępu do technologii</li>
+                <li>Wprowadzenie serii usług opartych o kryptowaluty</li>
             </ul>
 
             <h3>Kontakt</h3>
