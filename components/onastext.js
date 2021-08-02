@@ -34,9 +34,11 @@ export default function ONasText() {
             </ul>
             <style jsx> {`
             h1 {
+                color: rgba(243, 182, 31, 1);
                 font-size: 32px;
             }
             h3 {
+                color: rgba(243, 182, 31, 1);
                 font-size: 18px;
             }
             p, ul {
@@ -61,7 +63,6 @@ export default function ONasText() {
             @media only screen and (max-width: 499px) {
                 .main {
                     margin: auto;
-                    margin-top: 120px;
                     min-width: 300px;
                     width: 90%;
                 }
