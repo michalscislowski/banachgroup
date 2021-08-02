@@ -85,7 +85,7 @@ export default function TestContact() {
 
   function sendEmail(e) {
     e.preventDefault();
-    if (email.user_name !== null && email.message !== null){
+    if (email.user_name !== '' && email.message !== ''){
       emailjs.sendForm('banach_contact', 'template_korn0vo', e.target, 'user_5KT4anh7XaqgEHyrhQh4Z')
       .then((result) => {
           console.log(result.text);
@@ -182,23 +182,25 @@ export default function TestContact() {
         </form>
         <style jsx>{`
                 .main {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: stretch;
                   min-height: 100vh;
                   height: 100%;
-                  padding-top: 20vh;
                   background-color: #28313B;
                 }
                 .title {
-                  padding-bottom: 20px;
                   font-size: 4.2rem;
                   font-weight: 600;
                   color: rgba(243, 182, 31, 1);
+                  margin-bottom: 40px;
                 }
                 .contact {
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                  margin-top: 5vh;
                 }
                 .button {
                   margin-top: 5vh;
@@ -209,22 +211,21 @@ export default function TestContact() {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
-                  margin-top: 60px;
+                  margin-top: 40px;
                 }
                 .data {
-                  padding: 10px 0 20px 40px;
+                  padding-top: 20px;
                   display: flex;
                   width: 100%;
                   flex-direction: row;
                   align-items: flex-start;
-                    
                 }
                 .right {
                   color: #dedede;
                   padding-left: 20px;
                 }
                 .right a {
-                  font-size: 24px;
+                  font-size: 1.5rem;
                 }
                 .mobile {
                   display: none;
@@ -232,6 +233,7 @@ export default function TestContact() {
                 @media only screen and (max-width: 640px) {
                   .main {
                     padding-top: 10vh;
+                    padding-bottom: 10vh;
                   }
                   .title {
                     font-size: 3rem; 
@@ -244,10 +246,26 @@ export default function TestContact() {
                     display: block;
                   }
                 }
-                @media only screen and (max-height: 620px) {
-                  .main {
-                      padding-bottom: 30vh;
+                @media only screen and (max-width: 1300px) {
+                  .right a {
+                    font-size: 1.25rem;
                   }
+                  .title {
+                      font-size: 3rem;
+                  }
+                  .data {
+                    padding-top: 10px;
+                  }
+                  .box {
+                    margin-top: 25px;
+                  }
+                }
+                @media only screen and (max-width: 499px) {
+                  .title {
+                    margin-top: 20px;
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
                 }
             `}</style>
     </div>

@@ -29,38 +29,18 @@ export default function Bio() {
                     font-size: 2.2rem;
                     color: #eee;
                 }
-            @media only screen and (max-width: 812px) {
-                .title {
-                    padding-top: 10vh;
-                    font-size: 7rem;
+                @media only screen and (max-width: 499px) {
+                    .title {
+                        font-size: 4.5rem;
+                        padding-bottom: 2.5rem;
+                        line-height: 5.5rem;
+                    }
+                    .description {
+                        margin-right: 0;
+                        margin-top: -20px;
+                        font-size: 1.5rem;
+                    }
                 }
-                .box {
-                    align-items: center;
-                }
-                .description {
-                    margin-right: 0;
-                    margin-top: -20px;
-                    font-size: 2.6rem;
-                }
-            }
-            @media only screen and (max-width: 499px) {
-                .main {
-                    height: 100vh;
-                }
-                .title {
-                    font-size: 4rem;
-                }
-                .description {
-                    margin-right: 0;
-                    margin-top: -20px;
-                    font-size: 1.5rem;
-                }
-            }
-            @media only screen and (max-height: 399px) {
-                .main {
-                    padding-bottom: 40vh;
-                }
-            }
             `}</style>
         </div>
   );

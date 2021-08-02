@@ -2,15 +2,23 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Avatar from '@material-ui/core/Avatar';
-import PublicIcon from '@material-ui/icons/Public';
 
 const useStyles = makeStyles((theme) => ({
     box: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        flex: '1 1 0'
+        flex: '1 1 0',
+        padding: '10px',
     },
+    avatarStyle: {
+        height: '250px', 
+        width: '250px',
+        ['@media (max-width:1250px)']: {
+            height: '200px', 
+            width: '200px',
+        }
+    }
   }));
 
   export default function Team() {
@@ -21,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
             <a className="team-header">Zespół</a>
             <div className="team">
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Michał Scisłowski" style={{ height: '250px', width: '250px' }} src="/prezes_kwadrat.png" />
+                    <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/prezes_kwadrat.png" />
                     <p>CEO</p>
                     <h3>Michał Scisłowski</h3>
                     <div className="socials">
@@ -29,17 +37,16 @@ const useStyles = makeStyles((theme) => ({
                     </div>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Artur Polarny" style={{ height: '250px', width: '250px', }} src="/aist.jpg"/>
+                    <Avatar alt="Artur Polarny" className={classes.avatarStyle} src="/aist.jpg"/>
                     <p>COO</p>
                     <h3>Artur Polarny</h3>
                     <div className="socials">
                         <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/></a>
-                        <a><PublicIcon aria-label="Linkedin.com" onClick={() => window.open('http://aistmusic.com/')}/></a>
                     </div>
                     
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Maciej Cieszyński" style={{ height: '250px', width: '250px', }} src="/czad_kwadrat.png"/>
+                    <Avatar alt="Maciej Cieszyński" className={classes.avatarStyle} src="/czad_kwadrat.png"/>
                     <p>CTO</p>
                     <h3>Maciej Cieszyński</h3>
                     <div className="socials">
@@ -47,12 +54,11 @@ const useStyles = makeStyles((theme) => ({
                     </div>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Łukasz Jęksa" style={{ height: '250px', width: '250px', }} src="/ljkwadrat.jpg"/>
+                    <Avatar alt="Łukasz Jęksa" className={classes.avatarStyle} src="/ljkwadrat.jpg"/>
                     <p>CIO</p>
                     <h3>Łukasz Jęksa</h3>
                     <div className="socials">
                         <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/></a>
-                        <a><PublicIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.jeksa.pl')}/></a>
                     </div>
                 </div>
             </div>
@@ -61,19 +67,24 @@ const useStyles = makeStyles((theme) => ({
             background-color: #2C3E50;
             min-height: 100vh;
             height: 100%;
-            font-size: 30px;
+            font-size: 1.875rem;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: stretch;
         }
+        h3 {
+            margin: 0;
+            padding: 5px;
+        }
         .team {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-between;
-            margin-left: 5vw;
             margin-right: 5vw;
+            margin-left: 5vw;
             color: #eee;
         }
         .team-header {
@@ -81,9 +92,10 @@ const useStyles = makeStyles((theme) => ({
             font-weight: 700;
             margin-bottom: 50px;
             color: rgba(243, 182, 31, 1);
+            cursor: default;
         }
         p {
-            font-size: 20px;
+            font-size: 1.25rem;
             font-weight: 500;
         }
         .socials {
@@ -97,26 +109,22 @@ const useStyles = makeStyles((theme) => ({
         a:first-child {
             padding-right: 10px;
         }
-        @media only screen and (max-width: 1230px) {
+        @media only screen and (max-width: 1300px) {
+            .team-header {
+                font-size: 2.5rem;
+                margin-bottom: 25px;
+            }
             .main {
-                height: 100%;
-                padding-top: 20vh;
-                padding-bottom: 10vh;
-            }
-            .team {
-                flex-direction: column;
-                margin-left: 0;
-                margin-right: 0;
-            }
-            h3 {
-                margin-top: -20px;
-            }
-            .socials {
-                margin-top: -30px;
-                padding-bottom: 8vh;
+                font-size: 1.5rem;
             }
         }
-        @media only screen and (max-height: 620px) {
+        @media only screen and (max-width: 1040px) {
+            .team > div {
+                
+                flex-basis: 25%;
+            }
+        }
+        @media only screen and (max-width: 499px) {
             .main {
                 padding-bottom: 30vh;
             }

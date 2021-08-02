@@ -24,13 +24,15 @@ export default function Home() {
       <ButtonTop />
     <style jsx>{`
       section {
-        border-bottom: 1px solid white;
         height: 100%;
         scroll-snap-align: start;
         scroll-snap-type: y proximity;
         text-align: center;
         position: relative;
         overflow:visible;
+      }
+      section:last-child {
+        border: none;
       }
       .container {
         scrollbar-color: #606063 ##202324;
