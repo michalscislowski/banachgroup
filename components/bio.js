@@ -5,7 +5,8 @@ export default function Bio() {
     return (
         <div className="main">
             <a id="back-to-top-anchor" ></a>
-            <p className="title">BANACH GROUP</p>
+            {/* <p className="title">BANACH GROUP</p> */}
+            <img src="2.png" width="800" height="448"/>
             <p className="description">O block przed wszystkimi</p>
             <style jsx>{`
                 .main {
@@ -13,7 +14,7 @@ export default function Bio() {
                     min-height: 100vh;
                     height: 100%;
                     color: rgba(243, 182, 31, 1);
-                    background-color: #2C3E50;
+                    background-color: black;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -27,7 +28,7 @@ export default function Bio() {
                 .description {
                     margin: 0;
                     font-size: 2.2rem;
-                    color: #eee;
+                    color: rgba(243, 182, 31, 1);
                 }
                 @media only screen and (max-width: 499px) {
                     .title {

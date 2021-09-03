@@ -188,10 +188,11 @@ export default function TestContact() {
                   align-items: stretch;
                   min-height: 100vh;
                   height: 100%;
-                  background-color: #28313B;
+                  // background-color: #28313B;
+                  background-color: black;
                 }
                 .title {
-                  font-size: 4.2rem;
+                  font-size: 50px;
                   font-weight: 600;
                   color: rgba(243, 182, 31, 1);
                   margin-bottom: 40px;
@@ -225,7 +226,7 @@ export default function TestContact() {
                   padding-left: 20px;
                 }
                 .right a {
-                  font-size: 1.5rem;
+                  font-size: 20px;
                 }
                 .mobile {
                   display: none;
@@ -236,7 +237,7 @@ export default function TestContact() {
                     padding-bottom: 10vh;
                   }
                   .title {
-                    font-size: 3rem; 
+                    font-size: 50px;
                   }
                   .data {
                     padding-left: 0px; 
@@ -248,10 +249,10 @@ export default function TestContact() {
                 }
                 @media only screen and (max-width: 1300px) {
                   .right a {
-                    font-size: 1.25rem;
+                    font-size: 20px;
                   }
                   .title {
-                      font-size: 3rem;
+                    font-size: 50px;
                   }
                   .data {
                     padding-top: 10px;

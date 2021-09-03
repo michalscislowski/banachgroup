@@ -58,7 +58,7 @@ export default function ONasText() {
                 text-align: justify;
                 letter-spacing: 0.5px;
                 line-height: 1.625;
-                background-color: #2C3E50;
+                background-color: black;
             }
             .kontakt {
                 padding-bottom: 50px;

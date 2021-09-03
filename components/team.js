@@ -64,7 +64,8 @@ const useStyles = makeStyles((theme) => ({
             </div>
         <style jsx>{`
         .main {
-            background-color: #2C3E50;
+            // background-color: #2C3E50;
+            background-color: black;
             min-height: 100vh;
             height: 100%;
             font-size: 1.875rem;
@@ -77,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
         h3 {
             margin: 0;
             padding: 5px;
+            font-size: 20px;
         }
         .team {
             display: flex;
@@ -88,14 +90,14 @@ const useStyles = makeStyles((theme) => ({
             color: #eee;
         }
         .team-header {
-            font-size: 3.2rem;
+            font-size: 50px;
             font-weight: 700;
             margin-bottom: 50px;
             color: rgba(243, 182, 31, 1);
             cursor: default;
         }
         p {
-            font-size: 1.25rem;
+            font-size: 15px;
             font-weight: 500;
         }
         .socials {

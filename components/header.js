@@ -33,24 +33,28 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'baseline',
-    backgroundColor: '#2C3E50',
+    // backgroundColor: '#2C3E50',
+    backgroundColor: 'black',
     transition: '0.5s',
   },
   buttonStyle: {
     fontFamily: 'Titillium Web',
     fontWeight: '900',
-    fontSize: '1.25rem',
+    fontSize: '25px',
     marginTop: 10,
     marginBottom: 20,
+    marginRight: '25px',
     transition: '0.2s',
     ['@media (max-width:499px)']: {
       marginTop: 20,
     },
     color: '#eee',
+    borderBottom: '2px solid white',
     borderColor: '#999',
     '&:hover' : {
       color: '#F3B61F',
-      background: '#39424c'
+      background: '#39424c',
+      borderBottom: '2px solid #F3B61F',
     }
   },
 });
@@ -105,14 +109,16 @@ export default function Header(props) {
       </AppBar>
       <style jsx>{`
   a {
+    margin-top: 20px;
     color: #eee;
     letter-spacing: 2px;
     text-decoration: none;
-    padding: 20px 15px;
+    padding: 20px 5px;
   }
   .logo {
     margin: 0;
     padding: 0;
+    margin-top: 20px;
    }
    
   .push {
@@ -123,7 +129,7 @@ export default function Header(props) {
   header {
     display: flex;
     align-items: baseline;
-    background: transparent;
+    background: transparent
   }
   .socials {
     display: flex;
@@ -134,6 +140,7 @@ export default function Header(props) {
   .socials a {
     margin-left: 15px;
     transition: 0.2s;
+    font-size: 25px;
   }
   .logo:hover {
     color: #F3B61F;

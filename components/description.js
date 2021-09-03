@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     boxProperties: {
       backgroundColor:'rgba(255, 255, 255, 0.001)', 
       width: '100%',
+      padding: '50px',
     }
   
 }));
@@ -116,7 +117,8 @@ export default function Description() {
             .main {
               min-height: 100vh;
               height: 100%;
-              background-color: #28313B;
+              // background-color: #28313B;
+              background-color: black;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -124,7 +126,7 @@ export default function Description() {
               color: white;
             }
             .box {
-              width: 60%;
+              width: 50%;
               font-size: 16px;
               letter-spacing: 0.5px;
               line-height: 1.625;

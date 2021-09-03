@@ -16,7 +16,7 @@ export default function Onas() {
         <ONasText />
         <style jsx> {`
         .container {
-          background-color: #2C3E50;
+          background-color: black;
           color: white;
         }
         `} </style>
