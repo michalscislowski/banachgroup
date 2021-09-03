@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     boxProperties: {
       backgroundColor:'rgba(255, 255, 255, 0.001)', 
       width: '100%',
-      padding: '50px',
+      padding: '12.5px',
     }
   
 }));
@@ -141,6 +141,11 @@ export default function Description() {
               .box {
                 width: 95%;
                 padding-top: 100px;
+              }
+            }
+            @media only screen and (max-width: 1000px) {
+              .box {
+                width: 60%;
               }
             }
             `}</style>

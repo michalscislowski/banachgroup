@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#0b7a75',
     width: '640px', 
     marginBottom: 15,
+    border: '2px solid #444',
+    borderRadius: '5px',
     '& label.Mui-focused' : {
       color: 'red',
     },

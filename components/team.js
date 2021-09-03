@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flex: '1 1 0',
         padding: '10px',
+        ['@media (max-width: 1000px)']: {
+            flex: '1 1 50%',
+        }
     },
     avatarStyle: {
         height: '250px', 
@@ -115,12 +118,6 @@ const useStyles = makeStyles((theme) => ({
             }
             .main {
                 font-size: 1.5rem;
-            }
-        }
-        @media only screen and (max-width: 1040px) {
-            .team > div {
-                
-                flex-basis: 25%;
             }
         }
         @media only screen and (max-width: 499px) {

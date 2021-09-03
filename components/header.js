@@ -119,6 +119,7 @@ export default function Header(props) {
     margin: 0;
     padding: 0;
     margin-top: 20px;
+    margin-left: 25px;
    }
    
   .push {
