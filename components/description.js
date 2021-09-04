@@ -137,15 +137,15 @@ export default function Description() {
                 color: rgba(243, 182, 31, 1);
                 padding-bottom: 25px;
             }
+            @media only screen and (max-width: 1000px) {
+              .box {
+                width: 60%;
+              }
+            }
             @media only screen and (max-width: 499px) {
               .box {
                 width: 95%;
                 padding-top: 100px;
-              }
-            }
-            @media only screen and (max-width: 1000px) {
-              .box {
-                width: 60%;
               }
             }
             `}</style>

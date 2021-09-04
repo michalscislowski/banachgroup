@@ -45,12 +45,11 @@ const useStyles = makeStyles({
     marginBottom: 20,
     marginRight: '25px',
     transition: '0.2s',
-    ['@media (max-width:499px)']: {
-      marginTop: 20,
+    ['@media (max-width:599px)']: {
+      marginRight: '30px',
     },
     color: '#eee',
     borderBottom: '2px solid white',
-    borderColor: '#999',
     '&:hover' : {
       color: '#F3B61F',
       background: '#39424c',
@@ -162,24 +161,12 @@ export default function Header(props) {
   .linkedin:hover {
     color: #0072b1;
   }
-  @media only screen and (max-width: 800px) {
-    .push {
-      font-size: 22px;	
-      margin auto;
-    }
-    .socials a {
-      padding: 20px 10px;
-    }
-  }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 699px) {
     .main {
       width: 100vw;
     }
     .push {
       font-size: 1.5rem;	
-    }
-    .logo {
-      margin-top: 10px;
     }
     .socials {
       display: none;

@@ -6,7 +6,7 @@ export default function Bio() {
         <div className="main">
             <a id="back-to-top-anchor" ></a>
             {/* <p className="title">BANACH GROUP</p> */}
-            <img src="2.png" width="800" height="448"/>
+            <img className="image-logo" src="2.png"/>
             <p className="description">O block przed wszystkimi</p>
             <style jsx>{`
                 .main {
@@ -20,6 +20,10 @@ export default function Bio() {
                     justify-content: center;
                     align-items: center;
                 } 
+                img {
+                    width: 800px;
+                    height: 448px;
+                }
                 .title {
                     font-size: 9rem;
                     font-weight: 500;
@@ -38,8 +42,13 @@ export default function Bio() {
                     }
                     .description {
                         margin-right: 0;
-                        margin-top: -20px;
-                        font-size: 1.5rem;
+                        font-size: 1.65rem;
+                    }
+                }
+                @media only screen and (max-width: 649px) {
+                    .image-logo {
+                        width: 95vw;
+                        height: 54vw;
                     }
                 }
             `}</style>

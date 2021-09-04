@@ -82,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
             margin: 0;
             padding: 5px;
             font-size: 20px;
+            margin-bottom: 5px;
         }
         .team {
             display: flex;
@@ -102,10 +103,11 @@ const useStyles = makeStyles((theme) => ({
         p {
             font-size: 15px;
             font-weight: 500;
+            padding: 15px;
+            padding-top: 10px;
         }
         .socials {
             display: flex;
-            flex-direction: row;
         }
         a {
             cursor: pointer;
