@@ -32,10 +32,9 @@ const useStyles = makeStyles({
   appBarSolid: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'baseline',
-    // backgroundColor: '#2C3E50',
+    alignItems: 'center',
     backgroundColor: 'black',
-    transition: '0.5s',
+    transition: '0.25s',
   },
   buttonStyle: {
     fontFamily: 'Titillium Web',
@@ -43,10 +42,14 @@ const useStyles = makeStyles({
     fontSize: '25px',
     marginTop: 10,
     marginBottom: 20,
-    marginRight: '25px',
+    marginRight: 25,
     transition: '0.2s',
-    ['@media (max-width:599px)']: {
-      marginRight: '30px',
+    ['@media (max-width:499px)']: {
+      margin: 0,
+      padding: 15,
+      paddingBottom: 5,
+      paddingTop: 5,
+      fontSize: '17.5px',
     },
     color: '#eee',
     borderBottom: '2px solid white',
@@ -69,7 +72,7 @@ export default function Header(props) {
     const handleScroll = () => {
         const show = window.scrollY > 100
         let windowSize = window.innerWidth;
-        if (show & windowSize <= 899) {
+        if (show && windowSize <= 899) {
             setNavBackground('appBarSolid')
         } else {
             setNavBackground('appBarTransparent')
@@ -112,12 +115,12 @@ export default function Header(props) {
     color: #eee;
     letter-spacing: 2px;
     text-decoration: none;
-    padding: 20px 5px;
+    padding: 5px;
   }
   .logo {
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 25px;
    }
    
@@ -126,16 +129,12 @@ export default function Header(props) {
     cursor: pointer;
     margin-right: 20px;
   }
-  header {
-    display: flex;
-    align-items: baseline;
-    background: transparent
-  }
   .socials {
     display: flex;
     justify-content: center;
     padding-right: 15px;
     cursor: pointer;
+    margin-top: -15px;
   }
   .socials a {
     margin-left: 15px;
@@ -164,9 +163,6 @@ export default function Header(props) {
   @media only screen and (max-width: 699px) {
     .main {
       width: 100vw;
-    }
-    .push {
-      font-size: 1.5rem;	
     }
     .socials {
       display: none;

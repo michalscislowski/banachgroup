@@ -233,6 +233,22 @@ export default function TestContact() {
                 .mobile {
                   display: none;
                 }
+                @media only screen and (max-width: 1299px) {
+                  .right a {
+                    font-size: 20px;
+                  }
+                  .title {
+                    font-size: 45px;
+                    margin-bottom: 20px;
+                    margin-top: 30px;
+                  }
+                  .data {
+                    padding-top: 10px;
+                  }
+                  .box {
+                    margin-top: 15px;
+                  }
+                }
                 @media only screen and (max-width: 640px) {
                   .main {
                     padding-top: 10vh;
@@ -249,27 +265,13 @@ export default function TestContact() {
                     display: block;
                   }
                 }
-                @media only screen and (max-width: 1300px) {
-                  .right a {
-                    font-size: 20px;
-                  }
-                  .title {
-                    font-size: 50px;
-                  }
-                  .data {
-                    padding-top: 10px;
-                  }
-                  .box {
-                    margin-top: 25px;
-                  }
-                }
                 @media only screen and (max-width: 499px) {
                   .title {
                     margin-top: 20px;
                     font-size: 2rem;
                     margin-bottom: 20px;
                 }
-                }
+              }
             `}</style>
     </div>
         

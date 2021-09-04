@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     avatarStyle: {
         height: '250px', 
         width: '250px',
-        ['@media (max-width:1250px)']: {
-            height: '200px', 
-            width: '200px',
+        ['@media (max-width:1299px)']: {
+            height: '225px', 
+            width: '225px',
         }
     }
   }));
@@ -103,8 +103,7 @@ const useStyles = makeStyles((theme) => ({
         p {
             font-size: 15px;
             font-weight: 500;
-            padding: 15px;
-            padding-top: 10px;
+            margin-bottom: 5px;
         }
         .socials {
             display: flex;
@@ -113,10 +112,11 @@ const useStyles = makeStyles((theme) => ({
             cursor: pointer;
             color: #eee;
         }
-        @media only screen and (max-width: 1300px) {
+        @media only screen and (max-width: 1299px) {
             .team-header {
                 font-size: 2.5rem;
                 margin-bottom: 25px;
+                margin-top: 25px;
             }
             .main {
                 font-size: 1.5rem;
@@ -132,11 +132,10 @@ const useStyles = makeStyles((theme) => ({
                 padding-bottom: 20px;
             }
             h3 {
-                margin-top: -30px;
                 padding-bottom: 0;
             }
             p {
-                margin-top: 2px;
+                margin-bottom: 0;
             }
             .team-header {
                 margin-bottom: 20px;

@@ -34,6 +34,22 @@ export default function Bio() {
                     font-size: 2.2rem;
                     color: rgba(243, 182, 31, 1);
                 }
+                @media only screen and (max-width: 1299px) {
+                    img {
+                        width: 600px;
+                        height: 324px;
+                    }
+                    .description {
+                        margin-right: 0;
+                        font-size: 1.55rem;
+                    }
+                }
+                @media only screen and (max-width: 649px) {
+                    .image-logo {
+                        width: 95vw;
+                        height: 54vw;
+                    }
+                }
                 @media only screen and (max-width: 499px) {
                     .title {
                         font-size: 4.5rem;
@@ -43,12 +59,6 @@ export default function Bio() {
                     .description {
                         margin-right: 0;
                         font-size: 1.65rem;
-                    }
-                }
-                @media only screen and (max-width: 649px) {
-                    .image-logo {
-                        width: 95vw;
-                        height: 54vw;
                     }
                 }
             `}</style>
