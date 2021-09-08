@@ -30,7 +30,7 @@ export default function ONasText() {
             <h3>Kontakt</h3>
             <ul className="kontakt">
                 <li>Adres siedziby: Wilczak 12F/48</li>
-                <li>Adres email: office@8anach.com</li>
+                <li>Adres email: office@banachgroup.com</li>
             </ul>
             <style jsx> {`
             h1 {
