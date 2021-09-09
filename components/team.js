@@ -12,15 +12,30 @@ const useStyles = makeStyles((theme) => ({
         padding: '10px',
         ['@media (max-width: 1000px)']: {
             flex: '1 1 50%',
-        }
+        },
     },
     avatarStyle: {
         height: '250px', 
         width: '250px',
+        cursor: 'pointer',
         ['@media (max-width:1299px)']: {
             height: '225px', 
             width: '225px',
+        },
+        "&:hover": {
+            filter: 'blur(4px)',
+            opacity: '50%',
+        },
+        "&:hover + $social": {
+            display: 'block',
         }
+    },
+    social: {
+        position: 'absolute',
+        marginTop: '100px',
+        fontSize: '50px',
+        color: 'rgba(243, 182, 31, 1)',
+        display: 'none',
     }
   }));
 
@@ -32,37 +47,28 @@ const useStyles = makeStyles((theme) => ({
             <a className="team-header">Zespół</a>
             <div className="team">
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/prezes_kwadrat.png" />
+                    <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/scislykwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
+                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
                     <p>CEO</p>
                     <h3>Michał Scisłowski</h3>
-                    <div className="socials">
-                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/></a>
-                    </div>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Artur Polarny" className={classes.avatarStyle} src="/aist.jpg"/>
+                    <Avatar alt="Artur Polarny" className={classes.avatarStyle} src="/aist.jpg" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
+                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
                     <p>COO</p>
-                    <h3>Artur Polarny</h3>
-                    <div className="socials">
-                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/></a>
-                    </div>
-                    
+                    <h3>Artur Polarny</h3>     
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Maciej Cieszyński" className={classes.avatarStyle} src="/czad_kwadrat.png"/>
+                    <Avatar alt="Maciej Cieszyński" className={classes.avatarStyle} src="/czad_kwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
+                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
                     <p>CTO</p>
                     <h3>Maciej Cieszyński</h3>
-                    <div className="socials">
-                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/></a>
-                    </div>
                 </div>
                 <div className="box" className={classes.box}>
-                    <Avatar alt="Łukasz Jęksa" className={classes.avatarStyle} src="/ljkwadrat.jpg"/>
+                    <Avatar alt="Łukasz Jęksa" className={classes.avatarStyle} src="/ljkwadrat.jpg" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
+                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
                     <p>CIO</p>
                     <h3>Łukasz Jęksa</h3>
-                    <div className="socials">
-                        <a><LinkedInIcon aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/></a>
-                    </div>
                 </div>
             </div>
         <style jsx>{`
