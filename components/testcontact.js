@@ -8,6 +8,9 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import RoomIcon from '@material-ui/icons/Room';
 import PhoneIcon from '@material-ui/icons/Phone';
+import { useRouter } from 'next/router'
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -62,6 +65,9 @@ export default function TestContact() {
   const [email, setEmail] = useState(emptyEmail);
   const [open, setOpen] = useState(false);
   const [openSucces, setOpenSucces] = useState(false);
+  const router = useRouter();
+  const { locale } = router
+  const t = locale === 'en' ? en : pl;
 
 
   const handleWarning = () => {
@@ -110,7 +116,7 @@ export default function TestContact() {
 
   return (
     <div className="main">
-      <a className="title">Skontaktuj się z nami</a>
+      <a className="title">{t.contact}</a>
         <form className="contact" onSubmit={sendEmail}>
           <TextField
             InputProps={{
@@ -118,14 +124,14 @@ export default function TestContact() {
             }}
             className={classes.inputStyle} 
             InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web' }}}
-            key="podaj email"
+            key={t.email}
             type="email"
             name="user_name"
-            label="podaj email&nbsp;&nbsp;&nbsp;&nbsp;" 
+            label={t.email}
             id="user_name"
             value={email.user_name}
             onChange={handleChange}
-            helperText={emailError ? "niepoprawny adres email" : null}
+            helperText={emailError ? t.wrongemail : null}
             error={emailError}
             variant="outlined"
           />
@@ -136,7 +142,7 @@ export default function TestContact() {
             className={classes.inputStyle} 
             InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web'}}}
             name="message"
-            label="wiadomość" 
+            label={t.message}
             id="message"
             value={email.message}
             onChange={handleChange}
@@ -148,16 +154,16 @@ export default function TestContact() {
             className={classes.button}
             type="submit"
             variant="outlined"
-          > WYŚLIJ
+          > {t.sendbutton}
           </Button>
           <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="warning">
-              Proszę uzupełnić dane
+              {t.alertbutton1}
             </Alert>
           </Snackbar>
           <Snackbar open={openSucces} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
-              Wiadomość wysłana!
+              {t.alertbutton2}
             </Alert>
           </Snackbar>
           <div className="box">

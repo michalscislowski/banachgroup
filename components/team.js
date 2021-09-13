@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Avatar from '@material-ui/core/Avatar';
+import { useRouter } from 'next/router';
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 const useStyles = makeStyles((theme) => ({
     box: {
@@ -41,10 +44,13 @@ const useStyles = makeStyles((theme) => ({
 
   export default function Team() {
     const classes = useStyles();
+    const router = useRouter();
+    const { locale } = router
+    const t = locale === 'en' ? en : pl;
 
     return (
         <div className="main">
-            <a className="team-header">Zespół</a>
+            <a className="team-header">{t.team}</a>
             <div className="team">
                 <div className="box" className={classes.box}>
                     <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/scislykwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>

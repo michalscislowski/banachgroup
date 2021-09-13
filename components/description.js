@@ -6,6 +6,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { useRouter } from 'next/router'
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,6 +67,9 @@ export default function Description() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : pl;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -76,7 +82,7 @@ export default function Description() {
     return (
         <div className="main">
             <div className="box">
-                <a className="title">Co oferujemy</a>
+                <a className="title">{t.description}</a>
                 <AppBar elevation={0} position="static" className={classes.boxProperties} >
                     <Tabs
                     value={value}
@@ -88,29 +94,19 @@ export default function Description() {
                     aria-label="full width tabs example"
                     centered
                     >
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Doradztwo biznesowe" {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Wdrażanie technologii" {...a11yProps(1)} />
-                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label="Rozwój aplikacji" {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle1} {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle2} {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle3} {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction} className={classes.ourOffersText}>
-                  Banach Group będzie pierwszą firmą w Polsce, 
-                  która zapewni klientom detalicznym i biznesowym bezpieczny dostęp do technologii <b>BLOCKCHAIN</b>.
-                  Firma chce być w centrum sieci <b>BITCOIN</b> w kraju, oferując usługi informatyczne,
-                  a także doradztwo biznesowe w zakresie komercjalizacji technologii <b>BLOCKCHAIN</b>.
+                  {t.subtitle1text}
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction} className={classes.ourOffersText}>
-                  Dzięki doświadczeniu, które wykracza poza branżę telekomunikacyjną i IT, 
-                  nasza grupa koncentruje się na wprowadzaniu na rynek nowych modeli biznesowych opartych o mikro i nano transakcje.
-                  Staramy się znaleźć jak najwięcej zastosowań, 
-                  w których technologia <b>BLOCKCHAIN</b> byłaby w stanie podnieść szybkość dostarczania produktu,
-                  jego bezpieczeństwo oraz możliwości, powoli starzejących się usług uchodzących za standard.
+                  {t.subtitle2text}
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction} className={classes.ourOffersText}>
-                  <b>BLOCKCHAIN</b> jako narzędzie jest stale rozwijającą się technologią,
-                  do której co chwila są tworzone nowe usługi, czy produkty.
-                  Dzięki łącznej wiedzy uzyskanej na przestrzeni lat, 
-                  mamy możliwości być na przodzie wyścigu o klienta i technologię.
+                  {t.subtitle3text}
                 </TabPanel>
             </div>
             <style jsx>{`

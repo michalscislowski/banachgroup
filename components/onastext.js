@@ -1,36 +1,42 @@
 import React from 'react';
+import { useRouter } from 'next/router'
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 export default function ONasText() {
+    const router = useRouter();
+    const { locale } = router
+    const t = locale === 'en' ? en : pl;
     return (
         <article className="main">
-            <h1>O nas</h1>
+            <h1>{t.headerbutton}</h1>
    
-            <h3>Czym jest Banach Group?</h3>
-            <p>Jesteśmy startup'em, nastawionym na uczestniczeniu w procesie: rozwijania technologii blockchain, wprowadzania nowych rozwiązań i pomocy doradzczej z tym związanej. </p>
+            <h3>{t.whatis}</h3>
+            <p>{t.whatistext}</p>
         
-            <h3>Nasza misja</h3>
-            <p>Misją Banach Group jest rozwijanie ekosystemu blockchain w Polsce i budowa biznesu w oparciu o jeden stabilny, globalny łańcuch.</p>
+            <h3>{t.ourmission}</h3>
+            <p>{t.ourmissiontext}</p>
         
-            <h3>Cele na pierwszy 12 miesięcy:</h3>
+            <h3>{t.goals}</h3>
             <ul>
-                <li>Utworzenie pierwszego zdecentralizowanego kantoru wymiany kryptowalut w oparciu o technologię Non-Custodial wallets (W trakcie)</li>
-                <li>Dostarczenie usług tokenizacji niefinansowej i finansowej dla biznesu </li>
-                <li>Stworzenie pierwszych regulowanych rynków typu P2P w Polsce (ArtSwap, BeatSwap)</li>
+                <li>{t.goalstext1}</li>
+                <li>{t.goalstext2}</li>
+                <li>{t.goalstext3}</li>
             </ul>
 
-            <h3>Nasze plany na przyszłość</h3>
+            <h3>{t.plans}</h3>
             <ul>
-                <li>Wdrażanie nowoczesnych technologii w oparciu o technologię blockchain</li>
-                <li>Pokazanie użytkownikowi pozytywnych aspektów wykorzystania kryptowalut w świecie finansów przyszłości</li>
-                <li>Dostarczenie użytkownikom kompleksowych narzędzi oraz programów finansowych</li>
-                <li>Promocja równego dostępu do technologii</li>
-                <li>Wprowadzenie serii usług opartych o kryptowaluty</li>
+                <li>{t.planstext1}</li>
+                <li>{t.planstext2}</li>
+                <li>{t.planstext3}</li>
+                <li>{t.planstext4}</li>
+                <li>{t.planstext5}</li>
             </ul>
 
-            <h3>Kontakt</h3>
+            <h3>{t.onascontact}</h3>
             <ul className="kontakt">
-                <li>Adres siedziby: Wilczak 12F/48</li>
-                <li>Adres email: office@banachgroup.com</li>
+                <li>{t.onascontacttext1}</li>
+                <li>{t.onascontacttext2}</li>
             </ul>
             <style jsx> {`
             h1 {

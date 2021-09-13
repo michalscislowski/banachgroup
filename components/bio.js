@@ -1,13 +1,19 @@
 import React from 'react';
+import { useRouter } from 'next/router'
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 export default function Bio() {
+    const router = useRouter();
+    const { locale } = router
+    const t = locale === 'en' ? en : pl;
 
     return (
         <div className="main">
             <a id="back-to-top-anchor" ></a>
             {/* <p className="title">BANACH GROUP</p> */}
             <img className="image-logo" src="2.png"/>
-            <p className="description">O block przed wszystkimi</p>
+            <p className="description">{t.slogan}</p>
             <style jsx>{`
                 .main {
                     width: 100%;

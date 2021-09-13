@@ -5,9 +5,11 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Button from '@material-ui/core/Button';
 import { useRouter } from 'next/router'
+import Link from 'next/link';
 import { makeStyles } from "@material-ui/core/styles";
+import pl from '../public/locales/pl';
+import en from '../public/locales/en';
 
 const useStyles = makeStyles({
   root: {
@@ -36,12 +38,54 @@ const useStyles = makeStyles({
     backgroundColor: 'black',
     transition: '0.25s',
   },
+  buttonPl: {
+    fontFamily: 'Titillium Web',
+    fontWeight: '900',
+    fontSize: '18px',
+    margin: '0 25px 0 0',
+    transition: '0.2s',
+    color: '#eee',
+    borderBottom: '2px solid white',
+    borderRadius: '0',
+    '&:hover' : {
+      color: '#F3B61F',
+      background: '#39424c',
+      borderImage: 'linear-gradient(to right, white 50%, red 50%) 2',
+    },
+    ['@media (max-width:499px)']: {
+      margin: 0,
+      padding: 15,
+      paddingBottom: 5,
+      paddingTop: 5,
+      fontSize: '17.5px',
+    },
+  },
+  buttonUk: {
+    fontFamily: 'Titillium Web',
+    fontWeight: '900',
+    fontSize: '18px',
+    marginRight: 25,
+    transition: '0.2s',
+    color: '#eee',
+    borderBottom: '2px solid white',
+    borderRadius: '0',
+    '&:hover' : {
+      color: '#F3B61F',
+      background: '#39424c',
+      borderImage: 'linear-gradient(to right, red 20%, blue 20%, blue 40%, white 40%, white 60%, blue 60%, blue 80%, red 80%, red 100%) 2',
+    },
+    ['@media (max-width:499px)']: {
+      margin: 0,
+      padding: 15,
+      paddingBottom: 5,
+      paddingTop: 5,
+      fontSize: '17.5px',
+    },
+  },
   buttonStyle: {
     fontFamily: 'Titillium Web',
     fontWeight: '900',
-    fontSize: '25px',
-    marginTop: 10,
-    marginBottom: 20,
+    fontSize: '20px',
     marginRight: 25,
     transition: '0.2s',
     ['@media (max-width:499px)']: {
@@ -53,6 +97,8 @@ const useStyles = makeStyles({
     },
     color: '#eee',
     borderBottom: '2px solid white',
+    borderRadius: '0',
+    lineHeight: '1.5',
     '&:hover' : {
       color: '#F3B61F',
       background: '#39424c',
@@ -63,6 +109,8 @@ const useStyles = makeStyles({
 
 export default function Header(props) {
   const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : pl;
   const classes = useStyles();
   const [navBackground, setNavBackground] = useState('appBarTransparent')
   const navRef = React.useRef()
@@ -84,10 +132,6 @@ export default function Header(props) {
     }
   }, [])
 
-  const handleNas = (e) => {
-    e.preventDefault()
-      router.push('/onas')
-  }
 
   return (
     <div className={classes.root}>
@@ -101,12 +145,18 @@ export default function Header(props) {
           <a className="youtube"><YouTubeIcon aria-label="Youtube.com" onClick={() => window.open('https://www.youtube.com/channel/UCegE3WW7U2-Wb__mWK3oKJA')}/></a>
         </div>
         <div className="push" >
-          <a><Button className={classes.buttonStyle} onClick={handleNas} >
-            O NAS
-          </Button></a>
-          <a><Button className={classes.buttonStyle} >
-            BLOG
-          </Button></a>
+          <Link  href="/" locale="pl">
+            <a className={classes.buttonPl}>PL</a>
+          </Link>
+          <Link  href="/" locale="en">
+            <a className={classes.buttonUk}>ENG</a>
+          </Link>
+          <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
+            <a className={classes.buttonStyle}>{t.headerbutton}</a>
+          </Link>
+          <Link  href="/blog" >
+            <a className={classes.buttonStyle}>BLOG</a>
+          </Link>
         </div>
       </AppBar>
       <style jsx>{`
@@ -115,7 +165,6 @@ export default function Header(props) {
     color: #eee;
     letter-spacing: 2px;
     text-decoration: none;
-    padding: 5px;
   }
   .logo {
     margin: 0;
@@ -128,6 +177,8 @@ export default function Header(props) {
     margin-left: auto;
     cursor: pointer;
     margin-right: 20px;
+    display: flex;
+    align-items: flex-end;
   }
   .socials {
     display: flex;
