@@ -1,5 +1,5 @@
 export default{
-    "headerbutton": "O nas",
+    "headerbutton": "o nas",
     "slogan": "O block przed wszystkimi",
     "description": "Co oferujemy:",
     "subtitle1": "Doradztwo biznesowe:",

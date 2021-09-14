@@ -38,21 +38,22 @@ const useStyles = makeStyles({
     backgroundColor: 'black',
     transition: '0.25s',
   },
-  buttonPl: {
+  buttonLanguage: {
     fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '18px',
     margin: '0 25px 0 0',
+    paddingBottom: 3,
     transition: '0.2s',
     color: '#F3B61F',
     '&:hover' : {
       color: '#eee',
-      background: '#39424c',
+      background: 'black',
     },
     ['@media (max-width:499px)']: {
       margin: 0,
       padding: 15,
-      paddingBottom: 5,
+      paddingBottom: 10,
       paddingTop: 5,
       fontSize: '17.5px',
     },
@@ -95,7 +96,7 @@ const useStyles = makeStyles({
     lineHeight: '1.5',
     '&:hover' : {
       color: '#F3B61F',
-      background: '#39424c',
+      background: 'black',
       borderBottom: '2px solid #F3B61F',
     }
   },
@@ -140,16 +141,16 @@ export default function Header(props) {
         </div>
         <div className="push" >
           { locale == 'en' ? <Link  href="/" locale="pl" >
-            <a className={classes.buttonPl}>Polski</a>
+            <a className={classes.buttonLanguage}>Polski</a>
           </Link> : null }
           { locale == 'pl' ? <Link  href="/" locale="en" >
-            <a className={classes.buttonUk}>English</a>
+            <a className={classes.buttonLanguage}>English</a>
           </Link> : null }
           <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
             <a className={classes.buttonStyle}>{t.headerbutton}</a>
           </Link>
           <Link  href="/blog" >
-            <a className={classes.buttonStyle}>BLOG</a>
+            <a className={classes.buttonStyle}>blog</a>
           </Link>
         </div>
       </AppBar>
