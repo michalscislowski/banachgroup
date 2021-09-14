@@ -44,13 +44,10 @@ const useStyles = makeStyles({
     fontSize: '18px',
     margin: '0 25px 0 0',
     transition: '0.2s',
-    color: '#eee',
-    borderBottom: '2px solid white',
-    borderRadius: '0',
+    color: '#F3B61F',
     '&:hover' : {
-      color: '#F3B61F',
+      color: '#eee',
       background: '#39424c',
-      borderImage: 'linear-gradient(to right, white 50%, red 50%) 2',
     },
     ['@media (max-width:499px)']: {
       margin: 0,
@@ -66,13 +63,10 @@ const useStyles = makeStyles({
     fontSize: '18px',
     marginRight: 25,
     transition: '0.2s',
-    color: '#eee',
-    borderBottom: '2px solid white',
-    borderRadius: '0',
+    color: '#F3B61F',
     '&:hover' : {
-      color: '#F3B61F',
+      color: '#eee',
       background: '#39424c',
-      borderImage: 'linear-gradient(to right, red 20%, blue 20%, blue 40%, white 40%, white 60%, blue 60%, blue 80%, red 80%, red 100%) 2',
     },
     ['@media (max-width:499px)']: {
       margin: 0,
@@ -89,8 +83,8 @@ const useStyles = makeStyles({
     marginRight: 25,
     transition: '0.2s',
     ['@media (max-width:499px)']: {
-      margin: 0,
-      padding: 15,
+      marginRight: 15,
+      padding: 5,
       paddingBottom: 5,
       paddingTop: 5,
       fontSize: '17.5px',
@@ -145,12 +139,12 @@ export default function Header(props) {
           <a className="youtube"><YouTubeIcon aria-label="Youtube.com" onClick={() => window.open('https://www.youtube.com/channel/UCegE3WW7U2-Wb__mWK3oKJA')}/></a>
         </div>
         <div className="push" >
-          <Link  href="/" locale="pl">
-            <a className={classes.buttonPl}>PL</a>
-          </Link>
-          <Link  href="/" locale="en">
-            <a className={classes.buttonUk}>ENG</a>
-          </Link>
+          { locale == 'en' ? <Link  href="/" locale="pl" >
+            <a className={classes.buttonPl}>Polski</a>
+          </Link> : null }
+          { locale == 'pl' ? <Link  href="/" locale="en" >
+            <a className={classes.buttonUk}>English</a>
+          </Link> : null }
           <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
             <a className={classes.buttonStyle}>{t.headerbutton}</a>
           </Link>
@@ -162,7 +156,6 @@ export default function Header(props) {
       <style jsx>{`
   a {
     margin-top: 20px;
-    color: #eee;
     letter-spacing: 2px;
     text-decoration: none;
   }
@@ -186,6 +179,7 @@ export default function Header(props) {
     padding-right: 15px;
     cursor: pointer;
     margin-top: -15px;
+    color: #eee;
   }
   .socials a {
     margin-left: 15px;
@@ -212,11 +206,17 @@ export default function Header(props) {
     color: #0072b1;
   }
   @media only screen and (max-width: 699px) {
+    .logo {
+      display: none;
+    }
     .main {
       width: 100vw;
     }
     .socials {
       display: none;
+    }
+    .push {
+      margin-right: auto;
     }
   }
 

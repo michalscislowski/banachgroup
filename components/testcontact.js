@@ -237,7 +237,10 @@ export default function TestContact() {
                 .mobile {
                   display: none;
                 }
-                @media only screen and (max-width: 1299px) {
+                @media only screen and (max-width: 1299px) and (orientation:landscape) {
+                  .main {
+                    padding-top: 60px;
+                  }
                   .right a {
                     font-size: 20px;
                   }

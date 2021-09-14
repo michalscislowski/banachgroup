@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     boxProperties: {
       backgroundColor:'rgba(255, 255, 255, 0.001)', 
       width: '100%',
-      padding: '12.5px',
+      paddingTop: '12px',
     }
   
 }));
@@ -94,9 +94,9 @@ export default function Description() {
                     aria-label="full width tabs example"
                     centered
                     >
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle1} {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle2} {...a11yProps(1)} />
-                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '1rem'}} label={t.subtitle3} {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem'}} label={t.subtitle1} {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.87rem'}} label={t.subtitle2} {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem'}} label={t.subtitle3} {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction} className={classes.ourOffersText}>
@@ -133,7 +133,11 @@ export default function Description() {
                 color: rgba(243, 182, 31, 1);
                 padding-bottom: 25px;
             }
-            @media only screen and (max-width: 1000px) {
+            @media only screen and (max-width: 1000px) and (orientation:landscape) {
+              .main {
+                padding-top: 80px;
+                padding-bottom: 50px;
+              }
               .box {
                 width: 60%;
               }

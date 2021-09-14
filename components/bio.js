@@ -40,7 +40,11 @@ export default function Bio() {
                     font-size: 2.2rem;
                     color: rgba(243, 182, 31, 1);
                 }
-                @media only screen and (max-width: 1299px) {
+                @media only screen and (max-width: 1299px) and (orientation:landscape) {
+                    .main {
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+                    }
                     img {
                         width: 600px;
                         height: 324px;

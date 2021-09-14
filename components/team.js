@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
             cursor: pointer;
             color: #eee;
         }
-        @media only screen and (max-width: 1299px) {
+        @media only screen and (max-width: 1299px) and (orientation:landscape) {
             .team-header {
                 font-size: 2.5rem;
                 margin-bottom: 25px;
@@ -132,11 +132,13 @@ const useStyles = makeStyles((theme) => ({
             }
             .main {
                 font-size: 1.5rem;
+                padding-top: 70px;
+                padding-bottom: 20px;
             }
         }
         @media only screen and (max-width: 499px) {
             .main {
-                padding-bottom: 20vh;
+                padding-bottom: 10vh;
                 padding-top: 100px;
                 margin: 0;
             }
