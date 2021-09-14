@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
+import lottie from 'lottie-web';
 
 export default function Bio() {
     const router = useRouter();
     const { locale } = router
     const t = locale === 'en' ? en : pl;
+    const container = useRef(null);
+
+    useEffect(() => {
+        lottie.loadAnimation({
+            container: container.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/dwojka.json'
+        })
+    },[])
 
     return (
         <div className="main">
             <a id="back-to-top-anchor" ></a>
             {/* <p className="title">BANACH GROUP</p> */}
             <img className="image-logo" src="2.png"/>
+            {/* <div className="container" ref={container}></div> */}
             <p className="description">{t.slogan}</p>
             <style jsx>{`
                 .main {
