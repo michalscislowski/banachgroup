@@ -90,7 +90,7 @@ export default function Description() {
                 setActive(isVisible);
             }}
           >
-          <Fade direction="up" in={active} timeout={1000}>
+          <Fade in={active} timeout={1000}>
             <div className="box">
                 <a className="title">{t.description}</a>
                 <AppBar elevation={0} position="static" className={classes.boxProperties} >

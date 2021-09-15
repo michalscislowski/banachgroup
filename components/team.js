@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
                 setActive(isVisible);
             }}
           >
-          <Fade direction="up" in={active} timeout={1000}>
+          <Fade in={active} timeout={1000}>
             <div>
                 <a className="team-header">{t.team}</a>
                 <div className="team">

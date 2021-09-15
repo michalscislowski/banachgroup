@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
 import lottie from 'lottie-web';
+import Fade from "@material-ui/core/Fade";
 
 export default function Bio() {
     const router = useRouter();
@@ -26,7 +27,9 @@ export default function Bio() {
             {/* <p className="title">BANACH GROUP</p> */}
             {/* <img className="image-logo" src="2.png"/> */}
             <div className="image-logo" ref={container}></div>
-            <p className="description">{t.slogan}</p>
+            <Fade in timeout={500} style={{ transitionDelay: '1750ms'}}>
+                <p className="description">{t.slogan}</p>
+            </Fade>
             <style jsx>{`
                 .main {
                     width: 100%;

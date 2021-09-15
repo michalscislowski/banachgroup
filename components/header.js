@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { makeStyles } from "@material-ui/core/styles";
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
+import Fade from "@material-ui/core/Fade";
 
 const useStyles = makeStyles({
   root: {
@@ -113,7 +114,9 @@ export default function Header(props) {
 
 
   return (
+    
     <div className={classes.root}>
+      <Fade in timeout={500} style={{ transitionDelay: '1750ms'}}>
       <AppBar elevation={0} className={classes[navRef.current]}>
         <a href="/" className="logo"> <img src="2.png" width="130" height="73"/> </a>
         <div className="socials">
@@ -138,6 +141,7 @@ export default function Header(props) {
           </Link>
         </div>
       </AppBar>
+      </Fade>
       <style jsx>{`
   a {
     margin-top: 20px;
