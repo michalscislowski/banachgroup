@@ -68,6 +68,7 @@ export default function TestContact() {
   const router = useRouter();
   const { locale } = router
   const t = locale === 'en' ? en : pl;
+  const [msgError, setMsgError] = useState(false);
 
 
   const handleWarning = () => {
@@ -84,6 +85,7 @@ export default function TestContact() {
   };
 
   const handleChange = (e) => {
+    setMsgError(false);
     setEmail((prev) => (
       { ...prev, [e.target.name]: e.target.value }
     ));
@@ -103,6 +105,7 @@ export default function TestContact() {
       handleSucces();
 
     } else {
+      setMsgError(true);
       handleWarning();
     }
   }
@@ -149,6 +152,8 @@ export default function TestContact() {
             multiline
             rows={4}
             variant="outlined"
+            error={msgError}
+            helperText={msgError ? t.emptymsg : null}
           />
           <Button
             className={classes.button}
@@ -194,9 +199,8 @@ export default function TestContact() {
                   align-items: stretch;
                   min-height: 100vh;
                   height: 100%;
-                  // background-color: #28313B;
                   background-image: url('long_black_stars3.jpg');
-              background-size: cover;
+                  background-size: cover;
                 }
                 .title {
                   font-size: 50px;

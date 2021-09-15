@@ -12,6 +12,7 @@ export default {
     "contact": "Contact us",
     "email": "email",
     "wrongemail": "wrong email adress",
+    "emptymsg": "empty message",
     "message": "message",
     "sendbutton": "Send",
     "alertbutton1": "Please fill in your details",

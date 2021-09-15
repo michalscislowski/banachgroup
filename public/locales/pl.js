@@ -12,6 +12,7 @@ export default{
     "contact": "Skontaktuj się z nami",
     "email": "podaj email",
     "wrongemail": "niepoprawny adres email",
+    "emptymsg": "pusta wiadomość",
     "message": "wiadomość",
     "sendbutton": "Wyślij",
     "alertbutton1": "Proszę uzupełnić dane",

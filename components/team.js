@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             filter: 'blur(4px)',
-            opacity: '50%',
+            opacity: '75%',
         },
         "&:hover + $social": {
             display: 'block',
