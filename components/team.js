@@ -53,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
 
     return (
         <div className="main">
-            <a className="team-header">{t.team}</a>
             <VizSensor
             partialVisibility={true}
             onChange={(isVisible) => {
@@ -61,33 +60,36 @@ const useStyles = makeStyles((theme) => ({
             }}
           >
           <Fade direction="up" in={active} timeout={1000}>
-            <div className="team">
-                <div className="box" className={classes.box}>
-                    <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/scislykwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
-                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
-                    <p>CEO</p>
-                    <h3>Michał Scisłowski</h3>
-                </div>
-                <div className="box" className={classes.box}>
-                    <Avatar alt="Artur Polarny" className={classes.avatarStyle} src="/aist.jpg" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
-                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
-                    <p>COO</p>
-                    <h3>Artur Polarny</h3>     
-                </div>
-                <div className="box" className={classes.box}>
-                    <Avatar alt="Maciej Cieszyński" className={classes.avatarStyle} src="/czad_kwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
-                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
-                    <p>CTO</p>
-                    <h3>Maciej Cieszyński</h3>
-                </div>
-                <div className="box" className={classes.box}>
-                    <Avatar alt="Łukasz Jęksa" className={classes.avatarStyle} src="/ljkwadrat.jpg" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
-                    <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
-                    <p>CIO</p>
-                    <h3>Łukasz Jęksa</h3>
+            <div>
+                <a className="team-header">{t.team}</a>
+                <div className="team">
+                    <div className="box" className={classes.box}>
+                        <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/scislykwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
+                        <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
+                        <p>CEO</p>
+                        <h3>Michał Scisłowski</h3>
+                    </div>
+                    <div className="box" className={classes.box}>
+                        <Avatar alt="Artur Polarny" className={classes.avatarStyle} src="/aist.jpg" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
+                        <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/artur-polarny/')}/>
+                        <p>COO</p>
+                        <h3>Artur Polarny</h3>     
+                    </div>
+                    <div className="box" className={classes.box}>
+                        <Avatar alt="Maciej Cieszyński" className={classes.avatarStyle} src="/czad_kwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
+                        <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/maciej-cieszy%C5%84ski-2b8a17161/')}/>
+                        <p>CTO</p>
+                        <h3>Maciej Cieszyński</h3>
+                    </div>
+                    <div className="box" className={classes.box}>
+                        <Avatar alt="Łukasz Jęksa" className={classes.avatarStyle} src="/ljkwadrat.jpg" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
+                        <LinkedInIcon className={classes.social} aria-label="Linkedin.com" onClick={() => window.open('https://www.linkedin.com/in/%C5%82ukasz-j%C4%99ksa/')}/>
+                        <p>CIO</p>
+                        <h3>Łukasz Jęksa</h3>
+                    </div>
                 </div>
             </div>
-            </Fade>
+           </Fade>
           </VizSensor>
         <style jsx>{`
         .main {
@@ -117,11 +119,11 @@ const useStyles = makeStyles((theme) => ({
             margin-right: 5vw;
             margin-left: 5vw;
             color: #eee;
+            margin-top: 50px;
         }
         .team-header {
             font-size: 50px;
             font-weight: 700;
-            margin-bottom: 50px;
             color: rgba(243, 182, 31, 1);
             cursor: default;
         }
