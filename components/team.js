@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Avatar from '@material-ui/core/Avatar';
 import { useRouter } from 'next/router';
+import Fade from "@material-ui/core/Fade";
+import VizSensor from 'react-visibility-sensor';
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
 
@@ -47,10 +49,18 @@ const useStyles = makeStyles((theme) => ({
     const router = useRouter();
     const { locale } = router
     const t = locale === 'en' ? en : pl;
+    let [active, setActive] = useState(false);
 
     return (
         <div className="main">
             <a className="team-header">{t.team}</a>
+            <VizSensor
+            partialVisibility={true}
+            onChange={(isVisible) => {
+                setActive(isVisible);
+            }}
+          >
+          <Fade direction="up" in={active} timeout={1000}>
             <div className="team">
                 <div className="box" className={classes.box}>
                     <Avatar alt="Michał Scisłowski" className={classes.avatarStyle} src="/scislykwadrat.png" onClick={() => window.open('https://www.linkedin.com/in/micha%C5%82-scis%C5%82owski-56b2a6163/')}/>
@@ -77,6 +87,8 @@ const useStyles = makeStyles((theme) => ({
                     <h3>Łukasz Jęksa</h3>
                 </div>
             </div>
+            </Fade>
+          </VizSensor>
         <style jsx>{`
         .main {
             // background-color: #2C3E50;

@@ -17,6 +17,7 @@
     "next-fonts": "^1.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-material-ui-carousel": "^2.2.6"
+    "react-material-ui-carousel": "^2.2.6",
+    "react-visibility-sensor": "^5.1.1"
   }
 }

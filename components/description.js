@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Fade from "@material-ui/core/Fade";
+import VizSensor from 'react-visibility-sensor';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
@@ -70,6 +72,7 @@ export default function Description() {
   const router = useRouter()
   const { locale } = router
   const t = locale === 'en' ? en : pl;
+  let [active, setActive] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -81,6 +84,13 @@ export default function Description() {
 
     return (
         <div className="main">
+          <VizSensor
+            partialVisibility={true}
+            onChange={(isVisible) => {
+                setActive(isVisible);
+            }}
+          >
+          <Fade direction="up" in={active} timeout={1000}>
             <div className="box">
                 <a className="title">{t.description}</a>
                 <AppBar elevation={0} position="static" className={classes.boxProperties} >
@@ -109,6 +119,8 @@ export default function Description() {
                   {t.subtitle3text}
                 </TabPanel>
             </div>
+          </Fade>
+          </VizSensor>
             <style jsx>{`
             .main {
               min-height: 100vh;
@@ -143,12 +155,18 @@ export default function Description() {
                 width: 60%;
               }
             }
+            @media only screen and (max-width: 800px) {
+              .box {
+                width: 70%;
+              }
+            }
             @media only screen and (max-width: 499px) {
               .box {
                 width: 95%;
                 padding-top: 100px;
               }
             }
+
             `}</style>
     </div>
   );
