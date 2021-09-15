@@ -14,9 +14,9 @@ export default function Bio() {
         lottie.loadAnimation({
             container: container.current,
             renderer: 'svg',
-            loop: true,
+            loop: false,
             autoplay: true,
-            path: '/dwojka.json'
+            path: '/animacja-logo.json'
         })
     },[])
 
@@ -24,8 +24,8 @@ export default function Bio() {
         <div className="main">
             <a id="back-to-top-anchor" ></a>
             {/* <p className="title">BANACH GROUP</p> */}
-            <img className="image-logo" src="2.png"/>
-            {/* <div className="container" ref={container}></div> */}
+            {/* <img className="image-logo" src="2.png"/> */}
+            <div className="image-logo" ref={container}></div>
             <p className="description">{t.slogan}</p>
             <style jsx>{`
                 .main {
@@ -39,9 +39,10 @@ export default function Bio() {
                     justify-content: center;
                     align-items: center;
                 } 
-                img {
-                    width: 800px;
-                    height: 448px;
+                .image-logo {
+                    width: 700px;
+                    height: 392px;
+                    padding-bottom: 25px;
                 }
                 .title {
                     font-size: 9rem;
@@ -58,7 +59,7 @@ export default function Bio() {
                         padding-top: 50px;
                         padding-bottom: 50px;
                     }
-                    img {
+                    .image-logo {
                         width: 600px;
                         height: 324px;
                     }

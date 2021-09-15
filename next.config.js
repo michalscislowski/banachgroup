@@ -5,7 +5,7 @@ module.exports = withFonts({
   },
   i18n: {
     locales: ['en', 'pl'],
-    defaultLocale: 'en',
+    defaultLocale: 'pl',
     localeDetection: false,
   }
 });
