@@ -8,36 +8,38 @@ export default function ONasText() {
     const { locale } = router
     const t = locale === 'en' ? en : pl;
     return (
-        <article className="main">
-            <h1>{t.headerbutton}</h1>
-   
-            <h3>{t.whatis}</h3>
-            <p>{t.whatistext}</p>
-        
-            <h3>{t.ourmission}</h3>
-            <p>{t.ourmissiontext}</p>
-        
-            <h3>{t.goals}</h3>
-            <ul>
-                <li>{t.goalstext1}</li>
-                <li>{t.goalstext2}</li>
-                <li>{t.goalstext3}</li>
-            </ul>
+        <div className="main">
+            <article className="text">
+                <h1>{t.headerbutton}</h1>
+    
+                <h3>{t.whatis}</h3>
+                <p>{t.whatistext}</p>
+            
+                <h3>{t.ourmission}</h3>
+                <p>{t.ourmissiontext}</p>
+            
+                <h3>{t.goals}</h3>
+                <ul>
+                    <li>{t.goalstext1}</li>
+                    <li>{t.goalstext2}</li>
+                    <li>{t.goalstext3}</li>
+                </ul>
 
-            <h3>{t.plans}</h3>
-            <ul>
-                <li>{t.planstext1}</li>
-                <li>{t.planstext2}</li>
-                <li>{t.planstext3}</li>
-                <li>{t.planstext4}</li>
-                <li>{t.planstext5}</li>
-            </ul>
+                <h3>{t.plans}</h3>
+                <ul>
+                    <li>{t.planstext1}</li>
+                    <li>{t.planstext2}</li>
+                    <li>{t.planstext3}</li>
+                    <li>{t.planstext4}</li>
+                    <li>{t.planstext5}</li>
+                </ul>
 
-            <h3>{t.onascontact}</h3>
-            <ul className="kontakt">
-                <li>{t.onascontacttext1}</li>
-                <li>{t.onascontacttext2}</li>
-            </ul>
+                <h3>{t.onascontact}</h3>
+                <ul className="kontakt">
+                    <li>{t.onascontacttext1}</li>
+                    <li>{t.onascontacttext2}</li>
+                </ul>
+            </article>    
             <style jsx> {`
             h1 {
                 color: rgba(243, 182, 31, 1);
@@ -54,6 +56,11 @@ export default function ONasText() {
                 margin-bottom: 0;
             }
             .main {
+                background-image: url('long_black_stars.jpg');
+                background-size: cover;
+                min-height: 100vh;
+            }
+            .text {
                 margin: auto;
                 padding-top: 90px;
                 width: 60%;
@@ -64,13 +71,12 @@ export default function ONasText() {
                 text-align: justify;
                 letter-spacing: 0.5px;
                 line-height: 1.625;
-                background-color: black;
             }
             .kontakt {
                 padding-bottom: 50px;
             }
             @media only screen and (max-width: 499px) {
-                .main {
+                .text {
                     margin: auto;
                     min-width: 300px;
                     width: 90%;
@@ -79,7 +85,7 @@ export default function ONasText() {
                     padding-bottom: 0;
                 }
             }
-            `}</style>
-        </article>
+            `}</style>    
+        </div>
     );
 }

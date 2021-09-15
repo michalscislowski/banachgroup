@@ -80,7 +80,8 @@ const useStyles = makeStyles((theme) => ({
         <style jsx>{`
         .main {
             // background-color: #2C3E50;
-            background-color: black;
+            background-image: url('long_black_stars2.jpg');
+              background-size: cover;
             min-height: 100vh;
             height: 100%;
             font-size: 1.875rem;

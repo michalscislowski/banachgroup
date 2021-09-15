@@ -123,7 +123,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web' }}}
+            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web', fontSize: '18px' }}}
             key={t.email}
             type="email"
             name="user_name"
@@ -140,7 +140,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web'}}}
+            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web', fontSize: '18px'}}}
             name="message"
             label={t.message}
             id="message"
@@ -195,7 +195,8 @@ export default function TestContact() {
                   min-height: 100vh;
                   height: 100%;
                   // background-color: #28313B;
-                  background-color: black;
+                  background-image: url('long_black_stars3.jpg');
+              background-size: cover;
                 }
                 .title {
                   font-size: 50px;
