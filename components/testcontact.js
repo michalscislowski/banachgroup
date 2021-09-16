@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import MobileSocials from './mobileSocials';
 import emailjs from 'emailjs-com';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
-import RoomIcon from '@material-ui/icons/Room';
-import PhoneIcon from '@material-ui/icons/Phone';
+import makeStyles from '@mui/styles/makeStyles';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import RoomIcon from '@mui/icons-material/Room';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
@@ -126,7 +126,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web', fontSize: '18px' }}}
+            InputLabelProps={{ style: {fontWeight: '400', color: '#dedede', fontFamily: 'Titillium Web', fontSize: '19px'}}}
             key={t.email}
             type="email"
             name="user_name"
@@ -143,7 +143,7 @@ export default function TestContact() {
               classes: {input: classes.multilineColor}
             }}
             className={classes.inputStyle} 
-            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', letterSpacing: '1.2px', fontFamily: 'Titillium Web', fontSize: '18px'}}}
+            InputLabelProps={{style: {fontWeight: '400', color: '#dedede', fontFamily: 'Titillium Web', fontSize: '19px'}}}
             name="message"
             label={t.message}
             id="message"
@@ -158,7 +158,7 @@ export default function TestContact() {
           <Button
             className={classes.button}
             type="submit"
-            variant="outlined"
+            variant="contained"
           > {t.sendbutton}
           </Button>
           <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>

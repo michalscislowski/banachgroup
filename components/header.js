@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import AppBar from '@material-ui/core/AppBar';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import AppBar from '@mui/material/AppBar';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useRouter } from 'next/router'
 import Link from 'next/link';
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
-import Fade from "@material-ui/core/Fade";
+import Fade from "@mui/material/Fade";
 
 const useStyles = makeStyles({
   root: {

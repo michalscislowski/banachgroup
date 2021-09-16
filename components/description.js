@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Fade from "@material-ui/core/Fade";
+import { useTheme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from '@mui/material/AppBar';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Fade from "@mui/material/Fade";
 import VizSensor from 'react-visibility-sensor';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
@@ -104,9 +105,9 @@ export default function Description() {
                     aria-label="full width tabs example"
                     centered
                     >
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem'}} label={t.subtitle1} {...a11yProps(0)} />
-                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.87rem'}} label={t.subtitle2} {...a11yProps(1)} />
-                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem'}} label={t.subtitle3} {...a11yProps(2)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem', color: 'white'}} label={t.subtitle1} {...a11yProps(0)} />
+                    <Tab style={{ fontFamily: 'Titillium Web', fontSize: '0.87rem', color: 'white'}} label={t.subtitle2} {...a11yProps(1)} />
+                    <Tab  style={{ fontFamily: 'Titillium Web', fontSize: '0.9rem', color: 'white'}} label={t.subtitle3} {...a11yProps(2)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0} dir={theme.direction} className={classes.ourOffersText}>

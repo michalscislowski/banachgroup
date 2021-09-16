@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Avatar from '@material-ui/core/Avatar';
+import makeStyles from '@mui/styles/makeStyles';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Avatar from '@mui/material/Avatar';
 import { useRouter } from 'next/router';
-import Fade from "@material-ui/core/Fade";
+import Fade from "@mui/material/Fade";
 import VizSensor from 'react-visibility-sensor';
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
