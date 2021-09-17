@@ -199,7 +199,7 @@ export default function TestContact() {
                   align-items: stretch;
                   min-height: 100vh;
                   height: 100%;
-                  background-image: url('long_black_stars3.jpg');
+                  background-image: url('backgrounds/long_black_stars3.jpg');
                   background-size: cover;
                 }
                 .title {

@@ -116,9 +116,9 @@ export default function Header(props) {
   return (
     
     <div className={classes.root}>
-      <Fade in timeout={500} style={{ transitionDelay: '1750ms'}}>
+      <Fade in timeout={500} style={{transitionDelay: '1750ms'}}>
       <AppBar elevation={0} className={classes[navRef.current]}>
-        <a href="/" className="logo"> <img src="2.png" width="130" height="73"/> </a>
+        <a href="/" className="logo"> <img src="logo/2.png" width="130" height="73"/> </a>
         <div className="socials">
           <a className="facebook"><FacebookIcon aria-label="Facebook.com" onClick={() => window.open('https://www.facebook.com/BanachGroup')} /></a>
           <a className="instagram"><InstagramIcon aria-label="Instagram.com" onClick={() => window.open('https://www.instagram.com/BanachGroup/')}/></a>

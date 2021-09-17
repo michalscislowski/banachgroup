@@ -25,7 +25,7 @@ export default function Bio() {
         <div className="main">
             <a id="back-to-top-anchor" ></a>
             {/* <p className="title">BANACH GROUP</p> */}
-            <img className="image-logo" src="2.png"/>
+            <img className="image-logo" src="logo/2.png"/>
             {/* <div className="image-logo" ref={container}></div> */}
             <Fade in timeout={500} style={{ transitionDelay: '1750ms'}}>
                 <p className="description">{t.slogan}</p>

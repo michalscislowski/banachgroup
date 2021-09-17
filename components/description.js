@@ -127,7 +127,7 @@ export default function Description() {
               min-height: 100vh;
               height: 100%;
               // background-color: #28313B;
-              background-image: url('long_black_stars1.jpg');
+              background-image: url('backgrounds/long_black_stars1.jpg');
               background-size: cover;
               display: flex;
               flex-direction: column;
