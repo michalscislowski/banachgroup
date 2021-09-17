@@ -112,11 +112,10 @@ export default function Header(props) {
     }
   }, [])
 
-
   return (
     
     <div className={classes.root}>
-      <Fade in timeout={500} style={{transitionDelay: '1750ms'}}>
+      <Fade in timeout={500} style={{ transitionDelay: ((router.pathname == '/')) ? '1750ms' : '0ms'}}>
       <AppBar elevation={0} className={classes[navRef.current]}>
         <a href="/" className="logo"> <img src="logo/2.png" width="130" height="73"/> </a>
         <div className="socials">

@@ -56,7 +56,7 @@ export default function ONasText() {
                 margin-bottom: 0;
             }
             .main {
-                background-image: url('long_black_stars.jpg');
+                background-image: url('backgrounds/long_black_stars.jpg');
                 background-size: cover;
                 min-height: 100vh;
             }
