@@ -40,23 +40,22 @@ const useStyles = makeStyles({
     transition: '0.25s',
   },
   buttonLanguage: {
+    position: 'absolute',
+    top: 0,
+    right: 5,
     fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '18px',
     margin: '0 25px 0 0',
-    borderBottom: '2px solid #F3B61F',
     padding: '5px 5px 0px 5px',
     transition: '0.2s',
     color: '#F3B61F',
     '&:hover' : {
       color: '#eee',
       background: 'black',
-      borderBottom: '2px solid #eee',
     },
     ['@media (max-width:499px)']: {
-      margin: 0,
-      marginRight: 15,
-      padding: '15px 5px 3px 5px',
+      margin: '0! important',
       fontSize: '17.5px',
     },
   },
@@ -127,10 +126,10 @@ export default function Header(props) {
         </div>
         <div className="push" >
           { locale == 'en' ? <Link  href="/" locale="pl" >
-            <a className={classes.buttonLanguage}>Polski</a>
+            <a className={classes.buttonLanguage}>PL</a>
           </Link> : null }
           { locale == 'pl' ? <Link  href="/" locale="en" >
-            <a className={classes.buttonLanguage}>English</a>
+            <a className={classes.buttonLanguage}>ENG</a>
           </Link> : null }
           <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
             <a className={classes.buttonStyle}>{t.headerbutton}</a>
@@ -194,9 +193,6 @@ export default function Header(props) {
     color: #0072b1;
   }
   @media only screen and (max-width: 699px) {
-    .logo {
-      display: none;
-    }
     .main {
       width: 100vw;
     }
@@ -204,7 +200,7 @@ export default function Header(props) {
       display: none;
     }
     .push {
-      margin-right: auto;
+      ${locale == 'pl' ? 'margin-right: 60px' : 'margin-right: 40px'};
     }
   }
 

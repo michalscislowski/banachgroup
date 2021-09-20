@@ -31,11 +31,11 @@ export default function Home() {
     <style jsx>{`
       section {
         height: 100%;
-        scroll-snap-align: start;
-        scroll-snap-type: y proximity;
         text-align: center;
         position: relative;
         overflow:visible;
+        scroll-snap-align: start;
+        scroll-snap-type: y proximity;
       }
       section:last-child {
         border: none;
@@ -43,6 +43,12 @@ export default function Home() {
       .container {
         scrollbar-color: #606063 #202324;
         -webkit-overflow-scrolling: touch;
+      }
+      @media only screen and (max-width: 499px) {
+        section {
+          scroll-snap-align: none;
+          scroll-snap-type: none;
+        }
       }
     `}</style>
     </div>
