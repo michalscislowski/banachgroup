@@ -41,8 +41,8 @@ const useStyles = makeStyles({
   },
   buttonLanguage: {
     position: 'absolute',
-    top: 0,
-    right: 5,
+    top: -17.5,
+    right: -17.5,
     fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '18px',
@@ -57,6 +57,8 @@ const useStyles = makeStyles({
     ['@media (max-width:499px)']: {
       margin: '0! important',
       fontSize: '17.5px',
+      top: 2.5,
+      right: 2.5,
     },
   },
   buttonStyle: {
