@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginBottom: 25,
         flex: '1 1 0',
         padding: '10px',
         ['@media (max-width: 1000px)']: {
@@ -161,7 +162,7 @@ const useStyles = makeStyles((theme) => ({
                 padding-bottom: 20px;
             }
             h3 {
-                padding-bottom: 0;
+                margin-bottom: 30;
             }
             p {
                 margin-bottom: 0;
