@@ -52,6 +52,8 @@ const useStyles = makeStyles({
     fontWeight: '900',
     fontSize: '18px',
     margin: '0 25px 0 0',
+    marginTop: '0!important',
+    paddingBottom: 7.5,
     padding: '5px 5px 0px 20px',
     borderLeft: '2px solid',
     transition: '0.2s',
@@ -76,6 +78,8 @@ const useStyles = makeStyles({
     paddingLeft: 5,
     paddingRight: 5,
     marginRight: 25,
+    marginTop: '0!important',
+    marginBottom: 7.5,
     transition: '0.2s',
     ['@media (max-width:499px)']: {
       marginRight: 15,
@@ -237,6 +241,7 @@ export default function Header(props) {
     margin-left: auto;
     cursor: pointer;
     margin-right: 20px;
+    margin-top: 0;
     display: flex;
     align-items: flex-end;
   }
