@@ -19,6 +19,7 @@
     "axios": "^0.21.4",
     "emailjs-com": "^3.2.0",
     "lottie-web": "^5.7.13",
+    "mongodb": "^4.1.2",
     "next": "^10.0.5",
     "next-fonts": "^1.5.1",
     "react": "^17.0.1",

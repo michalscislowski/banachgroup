@@ -9,9 +9,9 @@ import Description from '../components/description'
 import TestContact from '../components/testcontact'
 import ButtonTop from '../components/buttontop'
 
-import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Head>
           <title>Banach Group</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/bsvlogo.svg"/>
         </Head>
         <Header />
         <section><Bio /></section>

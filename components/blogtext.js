@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Blog() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
-    const [notes, setNotes] = useState(featuredPosts);
+    const [notes, setNotes] = useState([]);
     const [isReloaded, setIsReloaded] = useState(true);
     const [open, setOpen] = useState(false);
     const [idToDelete, setIdToDelete] = useState();
@@ -154,15 +154,15 @@ export default function Blog() {
         return time;
     }
 
-  // useEffect(() => {
-  //   fetch(url_blogposts).then(res => {
-  //     if(res.ok){
-  //       return res.json()
-  //     }
-  //     console.log("JSON" + res.json());
-  //   }).then(jsonRes => setNotes(jsonRes))
-  //     .catch( function () { setNotes(featuredPosts) })
-  // }, [isReloaded]) 
+  useEffect(() => {
+    fetch(url_blogposts).then(res => {
+      if(res.ok){
+        return res.json()
+      }
+      console.log("JSON" + res.json());
+    }).then(jsonRes => setNotes(jsonRes))
+      .catch( function () { setNotes(featuredPosts) })
+  }, [isReloaded]) 
 
     const handleDelete = async (id) => {
         setOpen(true);

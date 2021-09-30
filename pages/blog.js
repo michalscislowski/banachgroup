@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Header from '../components/header'
 import BlogText from '../components/blogtext'
 import ButtonTop from '../components/buttontop'
-import { ThemeProvider, createMuiTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 export default function Onas() {
     return (
