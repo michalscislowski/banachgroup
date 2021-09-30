@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Blog() {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
     const [notes, setNotes] = useState([]);
     const [isReloaded, setIsReloaded] = useState(true);
     const [open, setOpen] = useState(false);
@@ -117,6 +117,7 @@ export default function Blog() {
     const url_blogposts = process.env.NEXT_PUBLIC_HOST_URL + "/api/blogposts";
 
     const handleExpandClick = (index) => {
+        console.log("index: ", index, expanded);
         expanded === index ? setExpanded(null) : setExpanded(index);
       };
 
@@ -137,9 +138,10 @@ export default function Blog() {
     
 
     function getTime(_date) {
+        const months = ["Stycznia", "Lutego", "Marca", "Kwietnia", "Maja", "Czerwca", "Lipca", "Sierpnia", "Września", "Października", "Listopada", "Grudnia"];
         let today = new Date(_date);
         let year = today.getFullYear();
-        let month = today.getMonth() + 1;
+        let month = today.getMonth();
         let day = today.getDate();
         let hours = today.getHours();
         let minutes = today.getMinutes();
@@ -148,9 +150,8 @@ export default function Blog() {
         if (hours < 10) {hours = "0" + hours}
         if (minutes < 10) {minutes = "0" + minutes}
         if (seconds < 10) {seconds = "0" + seconds}
-        if (month < 10) {month = "0" + month}
 
-        let time = "Godzina " + hours + ":" + minutes + ", dnia " + day + "." + month + "." + year;
+        let time = day + " " + months[month] + ", " + year;
         return time;
     }
 
@@ -210,8 +211,8 @@ export default function Blog() {
                                   subheader={getTime(post.date)}
                               />
                               <ExpandMore
-                                onClick={()=>handleExpandClick(post.id)}
-                                aria-expanded={expanded === post.id}
+                                onClick={()=>handleExpandClick(post._id)}
+                                aria-expanded={expanded === post._id}
                                 aria-label="show more"
                               >
                                 <ExpandMoreIcon style={{ fontSize: '50px' }}/>
@@ -228,7 +229,7 @@ export default function Blog() {
                                 </Typography>
                             </CardContent>
                             
-                            <Collapse in={expanded===post.id} timeout="auto" unmountOnExit>
+                            <Collapse in={expanded===post._id} timeout="auto" unmountOnExit>
                               <CardContent>
                                 <Typography paragraph>{post.long1}</Typography>
                                 <Typography paragraph>{post.long2}</Typography>

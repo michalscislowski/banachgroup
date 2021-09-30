@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
-import lottie from 'lottie-web';
+/* biblioteka do animacji import lottie from 'lottie-web'; */
 import Fade from "@mui/material/Fade";
 
 export default function Bio() {
@@ -11,6 +11,7 @@ export default function Bio() {
     const t = locale === 'en' ? en : pl;
     const container = useRef(null);
 
+    /* animacja logo
     useEffect(() => {
         lottie.loadAnimation({
             container: container.current,
@@ -19,7 +20,7 @@ export default function Bio() {
             autoplay: true,
             path: '/animacja-logo.json'
         })
-    },[])
+    },[]) */
 
     return (
         <div className="main">
