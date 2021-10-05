@@ -134,7 +134,7 @@ export default function Header(props) {
     const handleScroll = () => {
         const show = window.scrollY > 100
         let windowSize = window.innerWidth;
-        if (show && windowSize <= 899) {
+        if (show && windowSize <= 899 || router.pathname == '/blog' || router.pathname == '/onas' || router.pathname == '/aboutus') {
             setNavBackground('appBarSolid')
         } else {
             setNavBackground('appBarTransparent')

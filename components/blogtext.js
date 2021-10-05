@@ -204,7 +204,7 @@ export default function Blog() {
                   <Grid container spacing={4}>
                       {notes.map(post => (
                       <Grid item key={post.title} xs={12} md={6}>
-                          <Card elevation={1} >
+                          <Card elevation={1} style={{backgroundColor: 'transparent', color: 'white', border: '2px white solid'}}>
                             <CardActions disableSpacing>
                               <CardHeader 
                                   title={post.title}
@@ -215,22 +215,23 @@ export default function Blog() {
                                 aria-expanded={expanded === post._id}
                                 aria-label="show more"
                               >
-                                <ExpandMoreIcon style={{ fontSize: '50px' }}/>
+                                <ExpandMoreIcon style={{ fontSize: '50px', color: 'white' }}/>
                               </ExpandMore>
                             </CardActions>
                             <CardMedia
                               component="img"
-                              height="194"
+                              height="300"
                               src={post.image}
+                              style={{objectFit: 'contain'}}
                             />
-                            <CardContent>
+                            <CardContent style={{paddingBottom: '0',}}>
                                 <Typography variant="subtitle1" paragraph>
                                 {post.short}
                                 </Typography>
                             </CardContent>
                             
                             <Collapse in={expanded===post._id} timeout="auto" unmountOnExit>
-                              <CardContent>
+                              <CardContent style={{paddingTop: '0',}}>
                                 <Typography paragraph>{post.long1}</Typography>
                                 <Typography paragraph>{post.long2}</Typography>
                               </CardContent>

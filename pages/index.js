@@ -19,7 +19,7 @@ export default function Home() {
       <ThemeProvider theme={theme}>
         <Head>
           <title>Banach Group</title>
-          <link rel="icon" href="/bsvlogo.svg"/>
+          <link rel="icon" href="/favicon.png"/>
         </Head>
         <Header />
         <section><Bio /></section>
