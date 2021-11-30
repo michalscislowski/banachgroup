@@ -6,7 +6,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export default function Onas() {
+export default function Blog() {
     return (
       <div className="container">
         <ThemeProvider theme={theme}>
