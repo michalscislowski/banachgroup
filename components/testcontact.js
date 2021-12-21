@@ -63,7 +63,7 @@ const emptyEmail = {
 function addSuccessNotification() {
   store.addNotification({
     title: "Sukces!",
-    message: "Twoje e-mial został wysłany! Odpowiemy najszbyciej jak to możliwe.",
+    message: "Twoje e-mail został wysłany! Odpowiemy najszybciej jak to możliwe.",
     type: "success",
     insert: "top",
     container: "bottom-right",
@@ -138,14 +138,9 @@ export default function TestContact() {
       console.log("success");
 
     } else if (email.user_name !== '' && email.message === '') {
-
+      handleWarning();
       console.log('empty_message');
       setMsgError(true);
-    }
-    else if (email.user_name === '' && email.message !== '') {
-      console.log('empty_email_address');
-      console.log("1st: ", isEmail(email.user_name));
-      console.log("2nd: ", email.user_name.length);
     }
     else {
       setMsgError(true);
