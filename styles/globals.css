@@ -10,25 +10,28 @@ html {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-  scrollbar-color: #404043 #707073;
+  scrollbar-color: #707073 #404043;
   scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  width: 15px;
+  width: 10px;
   background: #202324; 
+  
 }
  
 ::-webkit-scrollbar-thumb {
   background: #606063; 
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #707073; 
+  border-radius: 10px;
 }
 
 a {

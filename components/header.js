@@ -48,6 +48,7 @@ const useStyles = makeStyles({
     transition: '0.25s',
   },
   buttonLanguage: {
+    width: '50px',
     fontFamily: 'Titillium Web',
     fontWeight: '900',
     fontSize: '18px',
@@ -146,6 +147,7 @@ export default function Header(props) {
     }
   }, [])
 
+  // console.log(JSON.stringify(router));
   return (
     
     <div className={classes.root}>
@@ -169,10 +171,10 @@ export default function Header(props) {
           <Link  href="/blog" >
             <a className={classes.buttonStyle}>blog</a>
           </Link>
-          { locale == 'en' ? <Link  href="/" locale="pl" >
+          { locale == 'en' ? <Link  href={router.pathname} locale="pl" >
             <a className={classes.buttonLanguage}>PL</a>
           </Link> : null }
-          { locale == 'pl' ? <Link  href="/" locale="en" >
+          { locale == 'pl' ? <Link  href={router.pathname} locale="en" >
             <a className={classes.buttonLanguage}>ENG</a>
           </Link> : null }
         </div>

@@ -54,6 +54,15 @@ export default function Learn() {
                 <h3>{t.learn_nft}</h3>
                 <p>{t.learn_nft_text}</p>
 
+                <h3>{t.learn_airdrop}</h3>
+                <p>{t.learn_airdrop_text}</p>
+
+                <h3>{t.learn_apeing}</h3>
+                <p>{t.learn_apeing_text}</p>
+
+                <h3>{t.learn_tps}</h3>
+                <p>{t.learn_tps_text}</p>
+
             </article>    
             <style jsx> {`
             h1 {
