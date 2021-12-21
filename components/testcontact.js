@@ -4,13 +4,13 @@ import emailjs from 'emailjs-com';
 import makeStyles from '@mui/styles/makeStyles';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import RoomIcon from '@mui/icons-material/Room';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { useRouter } from 'next/router'
 import pl from '../public/locales/pl';
 import en from '../public/locales/en';
+import { store } from 'react-notifications-component';
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -60,6 +60,37 @@ const emptyEmail = {
   message: '',
 };
 
+function addSuccessNotification() {
+  store.addNotification({
+    title: "Sukces!",
+    message: "Twoje e-mial został wysłany! Odpowiemy najszbyciej jak to możliwe.",
+    type: "success",
+    insert: "top",
+    container: "bottom-right",
+    animationIn: ["animate__animated", "animate__fadeIn"],
+    animationOut: ["animate__animated", "animate__fadeOut"],
+    dismiss: {
+      duration: 10000,
+      showIcon: true,
+    }
+  });
+}
+
+function addWarningNotification() {
+  store.addNotification({
+    title: "Uwaga!",
+    message: "Oba pola muszą być wypełnione!",
+    type: "warning",
+    insert: "top",
+    container: "bottom-right",
+    animationIn: ["animate__animated", "animate__fadeIn"],
+    animationOut: ["animate__animated", "animate__fadeOut"],
+    dismiss: {
+      duration: 5000,
+      showIcon: true,
+    }
+  });
+}
 export default function TestContact() {
   const classes = useStyles();
   const [email, setEmail] = useState(emptyEmail);
@@ -69,14 +100,15 @@ export default function TestContact() {
   const { locale } = router
   const t = locale === 'en' ? en : pl;
   const [msgError, setMsgError] = useState(false);
+  const [snackType, setSnackType] = useState("");
 
 
   const handleWarning = () => {
-    setOpen(true);
+    addWarningNotification();
   };
 
   const handleSucces = () => {
-    setOpenSucces(true);
+    addSuccessNotification();
   };
 
   const handleClose = () => {
@@ -103,10 +135,22 @@ export default function TestContact() {
 
       setEmail(emptyEmail);
       handleSucces();
+      console.log("success");
 
-    } else {
+    } else if (email.user_name !== '' && email.message === '') {
+
+      console.log('empty_message');
+      setMsgError(true);
+    }
+    else if (email.user_name === '' && email.message !== '') {
+      console.log('empty_email_address');
+      console.log("1st: ", isEmail(email.user_name));
+      console.log("2nd: ", email.user_name.length);
+    }
+    else {
       setMsgError(true);
       handleWarning();
+      console.log('error');
     }
   }
 
@@ -114,7 +158,7 @@ export default function TestContact() {
     const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regexp.test(s);
   }
-  
+
   const emailError = isEmail(email.user_name) !== true && email.user_name.length !== 0;
 
   return (
@@ -161,16 +205,6 @@ export default function TestContact() {
             variant="contained"
           > {t.sendbutton}
           </Button>
-          <Snackbar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="warning">
-              {t.alertbutton1}
-            </Alert>
-          </Snackbar>
-          <Snackbar open={openSucces} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="success">
-              {t.alertbutton2}
-            </Alert>
-          </Snackbar>
           <div className="box">
             <div className="data">
               <div className="left">
