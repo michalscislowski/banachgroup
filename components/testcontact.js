@@ -86,7 +86,7 @@ function addWarningNotification() {
     animationIn: ["animate__animated", "animate__fadeIn"],
     animationOut: ["animate__animated", "animate__fadeOut"],
     dismiss: {
-      duration: 5000,
+      duration: 6000,
       showIcon: true,
     }
   });
@@ -94,13 +94,10 @@ function addWarningNotification() {
 export default function TestContact() {
   const classes = useStyles();
   const [email, setEmail] = useState(emptyEmail);
-  const [open, setOpen] = useState(false);
-  const [openSucces, setOpenSucces] = useState(false);
   const router = useRouter();
   const { locale } = router
   const t = locale === 'en' ? en : pl;
   const [msgError, setMsgError] = useState(false);
-  const [snackType, setSnackType] = useState("");
 
 
   const handleWarning = () => {
@@ -109,11 +106,6 @@ export default function TestContact() {
 
   const handleSucces = () => {
     addSuccessNotification();
-  };
-
-  const handleClose = () => {
-    setOpenSucces(false);
-    setOpen(false);
   };
 
   const handleChange = (e) => {
@@ -143,7 +135,6 @@ export default function TestContact() {
       setMsgError(true);
     }
     else {
-      setMsgError(true);
       handleWarning();
       console.log('error');
     }

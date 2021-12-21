@@ -160,6 +160,9 @@ export default function Header(props) {
           <a className="youtube"><YouTubeIcon aria-label="Youtube.com" onClick={() => window.open('https://www.youtube.com/channel/UCegE3WW7U2-Wb__mWK3oKJA')}/></a>
         </div>
         <div className="push" >
+          <Link  href={ locale == 'pl' ? "/learn" : "/learn"}>
+            <a className={classes.buttonStyle}>{t.learn_page}</a>
+          </Link>
           <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
             <a className={classes.buttonStyle}>{t.headerbutton}</a>
           </Link>
