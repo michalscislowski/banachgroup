@@ -200,14 +200,6 @@ export default function TestContact() {
                 <a>Wilczak 12F/48 Poznań</a>
               </div>
             </div>
-            <div className="data">
-              <div className="left">
-                <PhoneIcon style={{ fontSize:'30px', backgroundColor: '#dedede', borderRadius: '5px'}}/>
-              </div>
-              <div className="right">
-                <a>884 108 114</a>
-              </div>
-            </div>
             <div className="mobile"><MobileSocials /></div>
           </div>
         </form>

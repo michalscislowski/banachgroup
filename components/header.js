@@ -135,7 +135,7 @@ export default function Header(props) {
     const handleScroll = () => {
         const show = window.scrollY > 100
         let windowSize = window.innerWidth;
-        if (show && windowSize <= 899 || router.pathname == '/blog' || router.pathname == '/onas' || router.pathname == '/aboutus') {
+        if (show && windowSize <= 899 || router.pathname == '/onas' || router.pathname == '/aboutus') {
             setNavBackground('appBarSolid')
         } else {
             setNavBackground('appBarTransparent')
@@ -147,7 +147,6 @@ export default function Header(props) {
     }
   }, [])
 
-  // console.log(JSON.stringify(router));
   return (
     
     <div className={classes.root}>
@@ -167,9 +166,6 @@ export default function Header(props) {
           </Link>
           <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
             <a className={classes.buttonStyle}>{t.headerbutton}</a>
-          </Link>
-          <Link  href="/blog" >
-            <a className={classes.buttonStyle}>blog</a>
           </Link>
           { locale == 'en' ? <Link  href={router.pathname} locale="pl" >
             <a className={classes.buttonLanguage}>PL</a>
@@ -207,12 +203,6 @@ export default function Header(props) {
                 <InfoIcon style={{color: 'white'}}/>
                 <Link  href={ locale == 'pl' ? "/onas" : "/aboutus"}>
                   <a className={classes.buttonStyle}>{t.headerbutton}</a>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose} disableRipple>
-                <BookIcon style={{color: 'white'}}/>
-                <Link  href="/blog" >
-                  <a className={classes.buttonStyle}>blog</a>
                 </Link>
               </MenuItem>
               <Divider style={{backgroundColor: 'white'}}/>
